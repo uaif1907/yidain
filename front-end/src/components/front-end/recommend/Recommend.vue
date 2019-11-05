@@ -2,7 +2,7 @@
   <div class="recommend">
     <div class="bidbox">
         <div class="top">
-
+            
         </div>
     </div>
   </div>
@@ -25,6 +25,8 @@ export default {
         height:100%;
     }
     .top{
-        background: url("") 
+        width:550px;
+        height: 200px;
+        background: url('../../../assets/recommend-img/topback.png') no-repeat;
     }
 </style>
