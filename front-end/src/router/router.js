@@ -21,7 +21,7 @@ const routes = [
   {
     path:'/',
     name:'',
-
+    
   },
   {
     path:'/index',
