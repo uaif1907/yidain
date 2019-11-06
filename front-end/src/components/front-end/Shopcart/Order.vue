@@ -1,14 +1,35 @@
 <template>
-    <div>
-        <el-table ref="multipleTable" align-center :data="tableData" tooltip-effect="dark" style="width: 100%;margin-top:20px" @selection-change="handleSelectionChange">
-      <el-table-column type="selection" width="80" label="全选"></el-table-column>
-      <el-table-column label="商品描述" width="400" prop="describe"></el-table-column>
-      <el-table-column prop="color" label="颜色" width="120"></el-table-column>
-      <el-table-column prop="size" label="尺码" width="120"></el-table-column>
-      <el-table-column prop="sun" label="数量" width="120"></el-table-column>
-      <el-table-column prop="price" label="单价" width="120"></el-table-column>
-      <el-table-column prop="total_price" label="总价" width="120"></el-table-column>
-        </el-table>
+    <div class="pay">
+        <el-row>
+           <div style="width: 1200px;height: 400px">
+                <div style="text-align: left;padding: 100px 10px;padding-bottom: 0;position: relative;">
+                    <img src="../../../assets/shopcart/图层46拷贝2.png" alt="" style="float: left">
+                    <div style="width: 2px;height: 20px;background:#ccc;border-radius: 10px;float: left;margin-top: 5px;margin-left: 5px"></div>
+                    <div style="float: left;margin-left: 10px">
+                        <p style="font-weight: 600;font-size: 16px">配送地址</p>
+                        <p style="font-size:9px;color: #9f9f9f">SHIPPING ADDRESS</p>
+                    </div>
+                    <div style="width: 67px;height:67px;background-color: #5ed5e0;color: white;opacity: 0.9;border-radius: 100%;text-align:center;font-size:30px;line-height:70px;position:absolute;left: 95px;top:65px;z-index: -1"><span style="opacity: 0.7">01</span></div>
+                </div>
+
+
+           </div>
+        </el-row>
+        <el-row>
+            <div style="width: 1200px;height: 400px">
+                <div style="text-align: left;padding: 100px 10px;padding-bottom: 0;position: relative;">
+                    <img src="../../../assets/shopcart/图层46拷贝2.png" alt="" style="float: left">
+                    <div style="width: 2px;height: 20px;background:#ccc;border-radius: 10px;float: left;margin-top: 5px;margin-left: 5px"></div>
+                    <div style="float: left;margin-left: 10px">
+                        <p style="font-weight: 600;font-size: 16px">商品信息</p>
+                        <p style="font-size:9px;color: #9f9f9f">PRODUCTINFO</p>
+                    </div>
+                    <div style="width: 67px;height:67px;background-color: #5ed5e0;color: white;opacity: 0.9;border-radius: 100%;text-align:center;font-size:30px;line-height:70px;position:absolute;left: 95px;top:65px;z-index: -1"><span style="opacity: 0.7">02</span></div>
+                </div>
+
+
+            </div>
+        </el-row>
     </div>
 </template>
 <script>
