@@ -1,5 +1,6 @@
 <template>
   <div class="list-box">
+      3
       <Chair></Chair>
   </div>
 </template>

@@ -6,9 +6,9 @@
                     <el-col :span="10" class="login-box">
                         <p>请您</p>
                         <div class="round-box">
-                                <router-link :to="{name:'login'}" tag="span">登录</router-link>
-                                |
-                                <router-link :to="{name:'login'}" tag="span">注册</router-link>
+                            <router-link :to="{name:'login'}" tag="span">登录</router-link>
+                            |
+                            <router-link :to="{name:'login'}" tag="span">注册</router-link>
                         </div>
                     </el-col>
                     <el-col :span="10" style="float: right;cursor: pointer">
@@ -16,12 +16,17 @@
                             <el-col :span="6">
                                 <i class="el-icon-search"></i>
                             </el-col>
-                            <el-col :span="6">
-                                <i class="el-icon-shopping-bag-2"></i>
-                            </el-col>
-                            <el-col :span="6">
-                                <i class="el-icon-s-custom"></i>
-                            </el-col>
+                            <router-link :to="{name:'shopcar'}" tag="div">
+                                <el-col :span="6">
+                                    <i class="el-icon-shopping-bag-2"></i>
+                                </el-col>
+                            </router-link>
+                            <router-link :to="{name:'person'}" tag="div">
+                                <el-col :span="6">
+                                    <i class="el-icon-s-custom"></i>
+                                </el-col>
+                            </router-link>
+
                             <el-col :span="6">
                                 <i class="el-icon-star-off"></i>
                             </el-col>
