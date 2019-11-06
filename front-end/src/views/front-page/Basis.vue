@@ -56,4 +56,7 @@
   .headers-box{
     height: 80px!important;
   }
+  .el-carousel__container{
+    height: 500px!important;
+  }
 </style>
