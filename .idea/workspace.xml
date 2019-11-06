@@ -20,6 +20,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1TBcMDi8TBzqWKLYDzf5pcRdAv7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -253,16 +260,24 @@
       </pane>
     </panes>
   </component>
+>>>>>>> 053d18ad120a27e397b693d947bbea9434422606
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+<<<<<<< HEAD
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+=======
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+>>>>>>> 053d18ad120a27e397b693d947bbea9434422606
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -291,7 +306,30 @@
       <workItem from="1572935402720" duration="88000" />
       <workItem from="1572935597937" duration="571000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+      <workItem from="1572936884126" duration="2153000" />
+      <workItem from="1572942599848" duration="891000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+=======
       <workItem from="1572936573571" duration="3950000" />
+>>>>>>> 6a0b8975e0b55a23afa6bd2a2ad9b192e854b9af
 =======
       <workItem from="1572936687181" duration="6528000" />
 >>>>>>> 053d18ad120a27e397b693d947bbea9434422606
@@ -513,5 +551,6 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 053d18ad120a27e397b693d947bbea9434422606
   </component>
 </project>
