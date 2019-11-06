@@ -10,7 +10,9 @@
           </el-main>
         </el-container>
       </el-main>
-      <el-footer>Footer</el-footer>
+      <el-footer>
+        <Fotter></Fotter>
+      </el-footer>
     </el-container>
   </div>
 
@@ -18,12 +20,12 @@
 
 <script>
   // @ is an alias to /src
-
+import Fotter from '@/components/front-end/fotter.vue'
 
   export default {
     name: 'home',
     components: {
-
+      Fotter,
     }
   }
 </script>
@@ -33,7 +35,7 @@
     height: 100%;
 
   }
-  .el-header, .el-footer {
+  .el-header {
     background-color: #B3C0D1;
     color: #333;
     text-align: center;
@@ -45,5 +47,11 @@
     text-align: center;
     line-height: 160px;
     padding: 0!important;
+  }
+  .el-footer{
+    width: 1200px;
+    height: 270px!important;
+    margin: 0 auto;
+
   }
 </style>
