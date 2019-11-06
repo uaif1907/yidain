@@ -9,7 +9,13 @@
     </div>
     <!-- 这里是主体哦 -->
     <div class="person-main">
+      <!--左侧导航-->
+      <div class="person_left">
 
+      </div>
+      <div class="person_right">
+
+      </div>
     </div>
   </div>
 </template>
@@ -62,6 +68,11 @@ export default {
   }
   .person-main{
     width: 1200px;
-    height: ;
+  }
+  .person_left{
+    width: 200px;
+    height: 200px;
+    background-color: #2c3e50;
+    float: left;
   }
 </style>
