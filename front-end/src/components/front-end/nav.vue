@@ -22,7 +22,7 @@
                                     </router-link>
                                 </el-menu-item>
                                 <el-menu-item index="2">
-                                    <router-link :to="{name:'first'}" tag="div">
+                                    <router-link :to="{name:'list'}" tag="div">
                                         <p style="height: 20px">座椅</p>
                                         <p class="zi">Seat</p>
                                     </router-link>
@@ -41,7 +41,7 @@
                                 </el-menu-item>
                                 <el-menu-item index="5">
                                     <router-link :to="{name:'first'}" tag="div">
-                                        <p style="height: 20px">茶几</p>
+                                        <p style="height: 20px">边几</p>
                                         <p class="zi">Seat Edge Several</p>
                                     </router-link>
                                 </el-menu-item>

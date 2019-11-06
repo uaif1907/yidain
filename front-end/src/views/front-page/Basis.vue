@@ -58,6 +58,7 @@
   .el-main {
     color: #333;
     text-align: center;
+
     padding: 0!important;
   }
 
@@ -71,5 +72,8 @@
   .headers-box{
     height: 80px!important;
 
+  }
+  .el-carousel__container{
+    height: 500px!important;
   }
 </style>

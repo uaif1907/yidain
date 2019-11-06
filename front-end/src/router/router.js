@@ -38,9 +38,27 @@ const routes = [
 
       },
       {
-        path: 'list',
-        name: 'list',// 列表页
-        component: () => import('../views/front-page/List.vue'),
+        path: 'chair',
+        name: 'chair',// 座椅页
+        component: () => import('../views/front-page/Chair.vue'),
+
+      },
+        {
+        path: 'bed',
+        name: 'bed',// 床页
+        component: () => import('../views/front-page/Bed.vue'),
+
+      },
+        {
+        path: 'cabinet',
+        name: 'cabinet',// 柜子页
+        component: () => import('../views/front-page/Cabinet.vue'),
+
+      },
+        {
+        path: 'edge',
+        name: 'edge',// 边几页
+        component: () => import('../views/front-page/Edge.vue'),
 
       },
       {
@@ -51,12 +69,11 @@ const routes = [
       },
       {
         path: 'shopcar',
-        name: 'shopcar',// 个人中心页
+        name: 'shopcar',// 购物车页
         component: () => import('../views/front-page/ShopCar.vue'),
 
       },
     ]
-
   },
 
 
