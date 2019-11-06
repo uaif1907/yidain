@@ -27,7 +27,7 @@
                     <el-row>
                         <el-col :span="12"><span style="font-size:12px;line-height: 30px">© Inter A LTTLE LIFE Systems B.V.1999 - 2019</span></el-col>
                         <el-col :span="12">
-                            <el-input placeholder="Search for what you want"  class="input-with-select">
+                            <el-input placeholder="Search for what you want"  class="input-with-select" style="width: 290px;float: left">
                                 <el-button slot="append" icon="el-icon-search"></el-button>
                             </el-input>
                         </el-col>

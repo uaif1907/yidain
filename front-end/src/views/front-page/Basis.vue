@@ -1,17 +1,23 @@
 <template>
   <div class="basis-box">
     <el-container>
-      <el-header>Header</el-header>
+      <el-header style="background-color: #f3f3f3;">
+        <Header></Header>
+      </el-header>
       <el-main>
         <el-container>
-          <el-header>Header</el-header>
-          <el-main style="width: 1200px;margin: 0 auto">
+          <el-header class="headers-box">
+            <Nav></Nav>
+          </el-header>
+          <el-main style="margin: 0 auto">
             <router-view></router-view>
           </el-main>
         </el-container>
       </el-main>
       <el-footer>
+
         <Fotter></Fotter>
+
       </el-footer>
     </el-container>
   </div>
@@ -20,12 +26,18 @@
 
 <script>
   // @ is an alias to /src
-import Fotter from '@/components/front-end/fotter.vue'
 
+
+  import Header from '@/components/front-end/header.vue'
+  import Nav from '@/components/front-end/nav.vue'
+  import Fotter from '@/components/front-end/fotter.vue'
   export default {
     name: 'home',
     components: {
-      Fotter,
+      Header,
+      Nav,
+      Fotter
+
     }
   }
 </script>
@@ -35,8 +47,9 @@ import Fotter from '@/components/front-end/fotter.vue'
     height: 100%;
 
   }
-  .el-header {
-    background-color: #B3C0D1;
+
+  .el-header{
+
     color: #333;
     text-align: center;
     line-height: 60px;
@@ -45,13 +58,18 @@ import Fotter from '@/components/front-end/fotter.vue'
   .el-main {
     color: #333;
     text-align: center;
-    line-height: 160px;
     padding: 0!important;
   }
+
   .el-footer{
     width: 1200px;
     height: 270px!important;
     margin: 0 auto;
+    padding: 0!important;
+  }
+
+  .headers-box{
+    height: 80px!important;
 
   }
 </style>
