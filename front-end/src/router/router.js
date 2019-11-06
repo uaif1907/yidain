@@ -14,11 +14,6 @@ const routes = [
   //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   // }
   {
-<<<<<<< HEAD
-    path:'/',
-    name:'',
-    
-=======
     path: '/',
     name: '', // 头和尾
     component: () => import('../views/front-page/Basis.vue'),
@@ -61,8 +56,6 @@ const routes = [
 
       },
     ]
-
->>>>>>> 053d18ad120a27e397b693d947bbea9434422606
   },
 
 

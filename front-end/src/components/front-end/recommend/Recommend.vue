@@ -10,7 +10,7 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'recommend',
@@ -27,6 +27,7 @@ export default {
     .top{
         width:550px;
         height: 200px;
+        margin: auto;
         background: url('../../../assets/recommend-img/topback.png') no-repeat;
     }
 </style>
