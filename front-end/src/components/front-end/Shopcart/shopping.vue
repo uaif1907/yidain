@@ -48,7 +48,7 @@ export default {
     },
     data() {
       return {
-          monkey:3146.00,
+        monkey:3146.00,
         // describe:'POANG-波昂'+'\n'+'有效',
         // color:"红色",
         num1:1,

@@ -39,7 +39,7 @@
     
 
     <el-button style="margin-top: 12px;background-color:#ccc;float:right;width:160px;height:60px;font-size:30px;color:white;" @click="next">结算</el-button>
-    
+    <Recommend></Recommend>
   </div>
   
 </template>
@@ -49,6 +49,7 @@ import Shopping from "@/components/front-end/Shopcart/shopping.vue"
 import Order from "@/components/front-end/Shopcart/Order.vue"
 import Pay from "@/components/front-end/Shopcart/Pay.vue"
 import Success from "@/components/front-end/Shopcart/Success.vue"
+import Recommend from "@/components/front-end/recommend/Recommend.vue"
 
 
 
@@ -56,7 +57,7 @@ import Success from "@/components/front-end/Shopcart/Success.vue"
 export default {
   name: 'ShopCar',
   components: {
-    Shopping,Order,Pay,Success,
+    Shopping,Order,Pay,Success,Recommend,
   },
   data() {
       return {
