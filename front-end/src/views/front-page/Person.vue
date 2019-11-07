@@ -10,8 +10,10 @@
         </el-breadcrumb>
       </div>
     </div>
+
     <!-- 这里是主体哦 -->
     <div class="person-main">
+
       <!--左侧导航-->
       <div class="person_left">
         <!--logo盒子-->
@@ -35,15 +37,15 @@
             <div class="conbox_con">
               <div class="conbox_body">
                 <div class="con_logobox"><img src="../../assets/person_img/图层66.png" alt=""></div>
-              <span>我的资料 / My profile</span>
+                <span>我的资料 / My profile</span>
               </div>
               <div class="conbox_body">
                 <div class="con_logobox"><img src="../../assets/person_img/图层70.png" alt=""></div>
-              <span>收货地址管理 / Receiving address</span>
+                <span>收货地址管理 / Receiving address</span>
               </div>
               <div class="conbox_body">
                 <div class="con_logobox"><img src="../../assets/person_img/图层67.png" alt=""></div>
-              <span>账户安全 / Account security</span>
+                <span>账户安全 / Account security</span>
               </div>
             </div>
           </div>
@@ -59,15 +61,15 @@
             <div class="conbox_con">
               <div class="conbox_body">
                 <div class="con_logobox"><img src="../../assets/person_img/图层71.png" alt=""></div>
-              <span>我的订单 / My order</span>
+                <span>我的订单 / My order</span>
               </div>
               <div class="conbox_body">
                 <div class="con_logobox"><img src="../../assets/person_img/图层72.png" alt=""></div>
-              <span>退换货管理 / Return and Exchange</span>
+                <span>退换货管理 / Return and Exchange</span>
               </div>
               <div class="conbox_body">
                 <div class="con_logobox"><img src="../../assets/person_img/图层73.png" alt=""></div>
-              <span>我的优惠券 / My coupon</span>
+                <span>我的优惠券 / My coupon</span>
               </div>
             </div>
           </div>
@@ -84,45 +86,250 @@
             <div class="conbox_con">
               <div class="conbox_body">
                 <div class="con_logobox"><img src="../../assets/person_img/图层76.png" alt=""></div>
-              <span>物流管理 / Logistics Management</span>
+                <span>物流管理 / Logistics Management</span>
               </div>
               <div class="conbox_body">
                 <div class="con_logobox"><img src="../../assets/person_img/图层77.png" alt=""></div>
-              <span>售后管理 / After-sales</span>
+                <span>售后管理 / After-sales</span>
               </div>
               <div class="conbox_body">
                 <div class="con_logobox"><img src="../../assets/person_img/图层78.png" alt=""></div>
-              <span>联系客服 / Contact Customer</span>
+                <span>联系客服 / Contact Customer</span>
               </div>
               <div class="conbox_body">
                 <div class="con_logobox"><img src="../../assets/person_img/图层79.png" alt=""></div>
-              <span>我的维权 / My rights</span>
+                <span>我的维权 / My rights</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!--右侧内容区 信息栏-->
-      <div class="person_right">
-        <div class="right_tx"></div>
-        <div class="tx_text">青 花 瓷 的 秘 密</div>
-        <div class="tx_text2">我们不相信会有完美无缺的家，要相信自己可以~~<i class="el-icon-edit" style="margin-left: 5px"></i></div>
-        <div class="tx_talk" style="position: absolute;right: 150px;top:30px"><img src="../../assets/person_img/图层81.png" alt=""></div>
-        <div class="tx_shop" style="position: absolute;right: 80px;top:30px"><img src="../../assets/person_img/购物袋拷贝.png" alt=""></div>
+
+      <!--右侧内容-->
+      <div class="person_right_box">
+
+        <!--信息栏-->
+        <div class="person_right">
+          <div class="right_tx"></div>
+          <div class="tx_text">青 花 瓷 的 秘 密</div>
+          <div class="tx_text2">我们不相信会有完美无缺的家，要相信自己可以~~<i class="el-icon-edit" style="margin-left: 5px"></i></div>
+          <div class="tx_talk" style="position: absolute;right: 150px;top:30px"><img src="../../assets/person_img/图层81.png" alt=""></div>
+          <div class="tx_shop" style="position: absolute;right: 80px;top:30px"><img src="../../assets/person_img/购物袋拷贝.png" alt=""><div class="yuan2">4</div></div>
+          <div class="textboxs">
+            <div class="textbox1">
+              <div class="textone">
+                <span style="float: left;font-size: 14px">昵称：</span>
+                <div class="nc_name" style="float: left;font-size: 12px;color: #b3b3b3;line-height: 22px">青花瓷的秘密</div>
+              </div>
+              <div class="texttwo">
+                <span style="float: left;font-size: 14px">性别：</span>
+                <div class="nc_name" style="float: left;font-size: 12px;color: #b3b3b3;line-height: 22px">女</div>
+              </div>
+            </div>
+            <div class="textbox2">
+              <div class="textone">
+                <span style="float: left;font-size: 14px">现居：</span>
+                <div class="nc_name" style="float: left;font-size: 12px;color: #b3b3b3;line-height: 22px">山西--太原</div>
+              </div>
+              <div class="texttwo">
+                <span style="float: left;font-size: 14px">手机：</span>
+                <div class="nc_name" style="float: left;font-size: 12px;color: #b3b3b3;line-height: 22px">17593874756</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--按键栏-->
+        <div class="person_right_status">
+          <div class="status_box">
+            <div class="status_logo"><img src="../../assets/person_img/图层82.png" alt=""></div>
+            <div class="status_text">待发货</div>
+            <div class="status_text2">Waiting  for  shipment</div>
+            <div class="status_g"></div>
+            <div class="status_g2"></div>
+          </div>
+          <div class="status_box2">
+            <div class="status_logo"><img src="../../assets/person_img/图层83.png" alt=""></div>
+            <div class="status_text">运输中</div>
+            <div class="status_text2">Is  being  transported</div>
+            <div class="status_g"></div>
+            <div class="status_g2"></div>
+          </div>
+          <div class="status_box3">
+            <div class="status_logo"><img src="../../assets/person_img/图层84.png" alt=""></div>
+            <div class="status_text">已完成</div>
+            <div class="status_text2">Is  being  transported</div>
+            <div class="status_g"></div>
+            <div class="status_g2"></div>
+          </div>
+        </div>
+
+        <!--内容栏-->
+        <div class="person_right_conboxs">
+
+          <!--表格头-->
+          <div class="right_conbox_title">
+            <input type="radio" style="float: left;margin-top: 20px">
+            <div class="title_con_box" style="height:56px;display: flex;justify-content: space-around;box-sizing: border-box">
+              <span>全选</span>
+              <span>商品描述</span>
+              <span>数量</span>
+              <span>单价</span>
+              <span>状态</span>
+              <span>状态</span>
+            </div>
+          </div>
+
+          <!--表格内容-->
+          <div class="right_conbox_con">
+            <div class="con-box">
+              <!--              <div class="demo-image box-img">-->
+              <!--                <div class="block" v-for="fit in fits" :key="fit">-->
+              <!--                  <el-image-->
+              <!--                          style="width: 120px; height: 120px"-->
+              <!--                          :src="url"-->
+              <!--                          :fit="fit">-->
+              <!--                  </el-image>-->
+              <!--                </div>-->
+              <!--              </div>-->
+              <div class="con_imgbox"><img src="../../assets/person_img/图层85.png" alt=""></div>
+              <div class="con_des">
+                <div class="des_title" style="font-weight: 600;">POÄNG- 波昂</div>
+                <span class="des_text" style="font-size: 12px;color: #b2b2b2;float: left;margin-left: 25px">摇椅  北欧风</span>
+              </div>
+              <div class="con_num">1</div>
+              <div class="con_money">699.00 <span>RMB</span></div>
+              <div class="con_status">
+                <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
+                <div style="font-weight: 600;position: absolute;top: 25px;left:0">代发货</div>
+              </div>
+              <div class="con_button">
+                <el-button type="info">查看物流</el-button>
+              </div>
+              <div class="con_order">
+                订单号：
+                <span>174683827949</span>
+              </div>
+            </div>
+            <div class="con-box">
+              <!--              <div class="demo-image box-img">-->
+              <!--                <div class="block" v-for="fit in fits" :key="fit">-->
+              <!--                  <el-image-->
+              <!--                          style="width: 120px; height: 120px"-->
+              <!--                          :src="url"-->
+              <!--                          :fit="fit">-->
+              <!--                  </el-image>-->
+              <!--                </div>-->
+              <!--              </div>-->
+              <div class="con_imgbox"><img src="../../assets/person_img/图层85.png" alt=""></div>
+              <div class="con_des">
+                <div class="des_title" style="font-weight: 600;">POÄNG- 波昂</div>
+                <span class="des_text" style="font-size: 12px;color: #b2b2b2;float: left;margin-left: 25px">摇椅  北欧风</span>
+              </div>
+              <div class="con_num">1</div>
+              <div class="con_money">699.00 <span>RMB</span></div>
+              <div class="con_status">
+                <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
+                <div style="font-weight: 600;position: absolute;top: 25px;left:0">代发货</div>
+              </div>
+              <div class="con_button">
+                <el-button type="info">查看物流</el-button>
+              </div>
+              <div class="con_order">
+                订单号：
+                <span>174683827949</span>
+              </div>
+            </div>
+            <div class="con-box">
+              <!--              <div class="demo-image box-img">-->
+              <!--                <div class="block" v-for="fit in fits" :key="fit">-->
+              <!--                  <el-image-->
+              <!--                          style="width: 120px; height: 120px"-->
+              <!--                          :src="url"-->
+              <!--                          :fit="fit">-->
+              <!--                  </el-image>-->
+              <!--                </div>-->
+              <!--              </div>-->
+              <div class="con_imgbox"><img src="../../assets/person_img/图层85.png" alt=""></div>
+              <div class="con_des">
+                <div class="des_title" style="font-weight: 600;">POÄNG- 波昂</div>
+                <span class="des_text" style="font-size: 12px;color: #b2b2b2;float: left;margin-left: 25px">摇椅  北欧风</span>
+              </div>
+              <div class="con_num">1</div>
+              <div class="con_money">699.00 <span>RMB</span></div>
+              <div class="con_status">
+                <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
+                <div style="font-weight: 600;position: absolute;top: 25px;left:0">代发货</div>
+              </div>
+              <div class="con_button">
+                <el-button type="info">查看物流</el-button>
+              </div>
+              <div class="con_order">
+                订单号：
+                <span>174683827949</span>
+              </div>
+            </div>
+            <div class="con-box">
+              <!--              <div class="demo-image box-img">-->
+              <!--                <div class="block" v-for="fit in fits" :key="fit">-->
+              <!--                  <el-image-->
+              <!--                          style="width: 120px; height: 120px"-->
+              <!--                          :src="url"-->
+              <!--                          :fit="fit">-->
+              <!--                  </el-image>-->
+              <!--                </div>-->
+              <!--              </div>-->
+              <div class="con_imgbox"><img src="../../assets/person_img/图层85.png" alt=""></div>
+              <div class="con_des">
+                <div class="des_title" style="font-weight: 600;">POÄNG- 波昂</div>
+                <span class="des_text" style="font-size: 12px;color: #b2b2b2;float: left;margin-left: 25px">摇椅  北欧风</span>
+              </div>
+              <div class="con_num">1</div>
+              <div class="con_money">699.00 <span>RMB</span></div>
+              <div class="con_status">
+                <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
+                <div style="font-weight: 600;position: absolute;top: 25px;left:0">代发货</div>
+              </div>
+              <div class="con_button">
+                <el-button type="info">查看物流</el-button>
+              </div>
+              <div class="con_order">
+                订单号：
+                <span>174683827949</span>
+              </div>
+            </div>
+            <div class="pagbox" style="margin: 10px 0">
+              <el-pagination
+                      background
+                      layout="prev, pager, next"
+                      :total="100">
+              </el-pagination>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
+    <!--    <recommend></recommend>-->
   </div>
 </template>
 
 <script>
   // @ is an alias to /src
-
+  // import recommend from "@/components/front-end/recommend/Recommend.vue"
 
   export default {
     name: 'person-box',
     components: {
-
-    }
+      // recommend,
+    },
+    // data(){
+    //   return {
+    //     fits: ['cover'],
+    //     url:'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
+    //     // url: '../../assets/person_img/图层85.png'
+    //   }
+    // }
   }
 </script>
 <style scoped>
@@ -271,12 +478,16 @@
     margin-left: 10px;
     margin-top: 2px;
   }
+  .person_right_box{
+    width: 900px;
+    float: right;
+  }
   .person_right{
     width: 900px;
     height: 190px;
     background-color: #ffffff;
-    float: right;
     border: 2px solid #e5e5e5;
+    box-sizing: border-box;
     position: relative;
   }
   .right_tx{
@@ -306,5 +517,221 @@
     position: absolute;
     left: 100px;
     top: 46px;
+  }
+  .yuan2{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    right: -10px;
+    top: 0;
+  }
+  .textboxs{
+    width: 500px;
+    height: 80px;
+    /*background-color: #37c87d;*/
+    position: absolute;
+    top: 90px;
+    left: 100px;
+  }
+  .textbox1{
+    width: 100%;
+    height: 40px;
+    /*background-color: lightskyblue;*/
+    padding-top: 5px;
+    box-sizing: border-box;
+  }
+  .textbox2{
+    width: 100%;
+    height: 40px;
+    /*background-color: lightcoral;*/
+    padding-top: 10px;
+    box-sizing: border-box;
+  }
+  .textone{
+    width: 180px;
+    height: 30px;
+    /*background-color: #37c87d;*/
+    float: left;
+  }
+  .texttwo{
+    width: 180px;
+    height: 30px;
+    float: left;
+    margin-left: 50px;
+  }
+  .person_right_status{
+    width: 100%;
+    height: 180px;
+    /*background-color: lightskyblue;*/
+    padding: 30px 0;
+    box-sizing: border-box;
+  }
+  .status_box{
+    width: 180px;
+    height: 100%;
+    background-color: #ffffff;
+    border: 2px solid #b2b2b2;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+  }
+  .status_logo{
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    left: 75px;
+    top: 20px;
+  }
+  .status_logo img{
+    width: 100%;
+    height: 100%;
+  }
+  .status_text{
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    top: 50px;
+    left: 64px;
+  }
+  .status_text2{
+    font-size: 12px;
+    font-weight: 600;
+    color: #9f9f9f;
+    position: absolute;
+    top: 80px;
+    left: 30px;
+  }
+  .status_g{
+    width: 2px;
+    height: 14px;
+    background-color: #838383;
+    position: absolute;
+    left: 45px;
+    top: 55px;
+  }
+  .status_g2{
+    width: 2px;
+    height: 14px;
+    background-color: #838383;
+    position: absolute;
+    right: 45px;
+    top: 55px;
+  }
+  .status_box2{
+    width: 180px;
+    height: 100%;
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-left: 50px;
+  }
+  .status_box2 .status_logo{
+    width: 28px;
+    height: 20px;
+  }
+  .status_box3{
+    width: 180px;
+    height: 100%;
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-left: 50px;
+  }
+  .status_box3 .status_logo{
+    width: 22px;
+    height: 22px;
+  }
+  .person_right_conboxs{
+    width: 100%;
+  }
+  .right_conbox_title{
+    width: 100%;
+    height: 60px;
+    /*background-color: lightskyblue;*/
+    border: 2px solid #e5e5e5;
+    box-sizing: border-box;
+    line-height: 56px;
+    padding: 0px 10px;
+    font-weight: 600;
+  }
+  .right_conbox_con{
+    width: 100%;
+  }
+  .con-box{
+    width: 100%;
+    height: 180px;
+    /*background-color: lightcoral;*/
+    position: relative;
+    border-bottom: 2px solid #b2b2b2;
+  }
+  .con_imgbox{
+    width: 130px;
+    height: 130px;
+    /*background-color: lightskyblue;*/
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .con_des{
+    width: 150px;
+    height: 60px;
+    /*background-color: lightseagreen;*/
+    position: absolute;
+    top: 30px;
+    left: 180px;
+  }
+  .con_num{
+    font-weight: 600;
+    position: absolute;
+    top: 34px;
+    left: 400px;
+  }
+  .con_money{
+    font-weight: 600;
+    position: absolute;
+    top: 34px;
+    left: 500px;
+  }
+  .con_money span{
+    font-size: 12px;
+    color: #b2b2b2;
+  }
+  .con_status{
+    width: 80px;
+    height: 60px;
+    /*background-color: #2c3e50;*/
+    position: absolute;
+    top: 30px;
+    right: 165px;
+  }
+  .con_button{
+    width: 56px;
+    height: 14px;
+    position: absolute;
+    right: 65px;
+    top:30px
+  }
+  .con_order{
+    width: 200px;
+    height: 28px;
+    /*background-color: #37c87d;*/
+    font-size: 14px;
+    float: left;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .con_order span{
+    font-size: 16px;
+    font-weight: 600;
   }
 </style>
