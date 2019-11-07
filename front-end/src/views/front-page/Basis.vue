@@ -46,8 +46,7 @@
 
     padding: 0!important;
   }
-<<<<<<< HEAD
-=======
+
 
   .el-footer{
     width: 1200px;
@@ -82,5 +81,5 @@
   .input-box .el-input__inner {
     border: 1px solid #a9a9a9!important;
   }
->>>>>>> b8d1b6bf3c439ca9e9a5a7ad69cf3d83eb453e0e
+
 </style>

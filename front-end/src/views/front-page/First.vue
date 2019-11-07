@@ -12,6 +12,23 @@
               </el-carousel-item>
               <el-carousel-item height="500px">
                   <div class="role_2">
+                      <div class="buy">
+                          立即购买
+                      </div>
+                  </div>
+              </el-carousel-item>
+              <el-carousel-item height="500px">
+                  <div class="role_3">
+                      <div class="buy">
+                          立即购买
+                      </div>
+                  </div>
+              </el-carousel-item>
+              <el-carousel-item height="500px">
+                  <div class="role_4">
+                      <div class="buy">
+                          立即购买
+                      </div>
                   </div>
               </el-carousel-item>
           </el-carousel>
@@ -126,6 +143,7 @@
           <div style="width:25px;color:darkgrey;height:450px;line-height:300px;"><span style="cursor: pointer" @click="left">←</span></div>
           <div class="line6_div" v-if="present===1">
               <div class="line6_1" :data="rows[0]">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[0].price"></b></span>
@@ -133,6 +151,7 @@
                   <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[0].source)">Buy</span>
               </div>
               <div class="line6_2">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[1].price"></b></span>
@@ -140,6 +159,7 @@
                   <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[1].source)">Buy</span>
               </div>
               <div class="line6_3">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[2].price"></b></span>
@@ -147,6 +167,7 @@
                  <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[2].source)">Buy</span>
               </div>
               <div class="line6_4">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[3].price"></b></span>
@@ -156,6 +177,7 @@
           </div>
           <div class="line6_div" v-else-if="present===2">
               <div class="line6_2">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[1].price"></b></span>
@@ -163,6 +185,7 @@
                   <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[1].source)">Buy</span>
               </div>
               <div class="line6_1" :data="rows[0]">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[0].price"></b></span>
@@ -170,6 +193,7 @@
                   <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[0].source)">Buy</span>
               </div>
               <div class="line6_3">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[2].price"></b></span>
@@ -177,6 +201,7 @@
                  <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[2].source)">Buy</span>
               </div>
               <div class="line6_4">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[3].price"></b></span>
@@ -186,6 +211,7 @@
           </div>
           <div class="line6_div" v-else-if="present===3">
               <div class="line6_3">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[2].price"></b></span>
@@ -193,6 +219,7 @@
                  <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[2].source)">Buy</span>
               </div>
               <div class="line6_2">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[1].price"></b></span>
@@ -200,6 +227,7 @@
                   <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[1].source)">Buy</span>
               </div>
               <div class="line6_1" :data="rows[0]">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[0].price"></b></span>
@@ -207,6 +235,7 @@
                   <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[0].source)">Buy</span>
               </div>
               <div class="line6_4">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[3].price"></b></span>
@@ -216,6 +245,7 @@
           </div>
           <div class="line6_div" v-else-if="present===4">
               <div class="line6_4">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[3].price"></b></span>
@@ -223,6 +253,7 @@
                   <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[3].source)">Buy</span>
               </div>
               <div class="line6_3">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[2].price"></b></span>
@@ -230,6 +261,7 @@
                  <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[2].source)">Buy</span>
               </div>
               <div class="line6_2">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[1].price"></b></span>
@@ -237,6 +269,7 @@
                   <span style="border:1px solid black;width:45px;height:15px;position:absolute;bottom:0;font-size:13px;right:0;cursor:pointer" @click="clickk(rows[1].source)">Buy</span>
               </div>
               <div class="line6_1" :data="rows[0]">
+                  <span style="display:block;border-radius:50%;width:60px;height:60px;background-color:yellow;position:absolute;top:20px;left:-15px;font-size:20px;text-align: center;line-height: 60px;opacity: 0.6"><b>SALE</b></span>
                   <span style="position:absolute;bottom:0;left:0;font-size:10px;">
                       RMB
                       <span style="font-size: 20px"><b v-text="rows[0].price"></b></span>
@@ -299,7 +332,7 @@
 </template>
 <style>
     .role_1{
-        background:url('../../assets/firstpage_need_png/first.png') no-repeat;
+        background:url('../../assets/firstpage_need_png/lb1.png') no-repeat;
         background-size: cover;
         width:1200px;
         height:500px;
@@ -315,9 +348,22 @@
         left:180px;
         line-height:50px;
         bottom:50px;
+        cursor:pointer;
     }
     .role_2{
-        background:url('../../assets/firstpage_need_png/first_1.png') no-repeat;
+        background:url('../../assets/firstpage_need_png/lb2.png') no-repeat;
+        background-size: cover;
+        width:1200px;
+        height:500px;
+    }
+    .role_3{
+        background:url('../../assets/firstpage_need_png/lb3.png') no-repeat;
+        background-size: cover;
+        width:1200px;
+        height:500px;
+    }
+    .role_4{
+        background:url('../../assets/firstpage_need_png/lb4.png') no-repeat;
         background-size: cover;
         width:1200px;
         height:500px;
