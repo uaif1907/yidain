@@ -4,7 +4,7 @@
     <el-breadcrumb separator="/" class="bread">
       <div class="yuandian1"></div>
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item><a href="/">座椅</a></el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/chair' }"><a>座椅</a></el-breadcrumb-item>
       <el-breadcrumb-item>北欧旅程</el-breadcrumb-item>
     </el-breadcrumb>
     <div class="showbox">
@@ -52,7 +52,10 @@
             <span style="margin-left:36px;">量</span>
           </div>
           <div>
-            <el-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字" size="small"></el-input-number>
+            <!-- <el-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="购买数量" size="small"></el-input-number> -->
+            <div>-</div>
+            <div style="width:40px;height:10px;border-radius:5px;">{{ amount }}</div>
+            <div>+</div>
           </div>
           <div style="width:100px;display:flex;height:33px;line-height:33px;margin-left:20px;">
             <span>库存{{num1}}件</span>
@@ -64,6 +67,7 @@
         </div>
       </div>
     </div>
+
     <Recommend></Recommend>
   </div>
 </template>
