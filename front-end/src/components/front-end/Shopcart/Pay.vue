@@ -17,7 +17,7 @@
                        <p>～ 订单提交成功啦，赶紧付款吧</p>
                    </div>
                    <div>
-                      <div style="float: left">～</div>  <div class="dsq">定时器</div> 后将自动取消订单
+                      <div style="float: left">～</div>  <div class="dsq">min</div> 后将自动取消订单
                    </div>
                    <div class="ord-text">
                        <span>～ 订单号是：</span>
