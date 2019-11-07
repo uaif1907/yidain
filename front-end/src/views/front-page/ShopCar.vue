@@ -10,43 +10,53 @@
     
     
     <!-- 步骤条 -->
-    <div class="Step">
-      <el-steps :active="active" align-center>
+    
+      <el-steps :active="active" align-center style="background-color:#f3f3f3;padding:20px 0;">
         <el-step title="查看购物车"></el-step>
         <el-step title="填写订单信息"></el-step>
         <el-step title="选择支付方式"></el-step>
         <el-step title="成功提交订单"></el-step>
       </el-steps>
-    </div>
+      <div v-if="active===0">
+        <Shopping></Shopping>
+      </div>
+      <div v-if="active===1">
+        <Order></Order>
+      </div>
+      <div v-if="active===2">
+        <Pay></Pay>
+      </div>
+      <div v-if="active===3">
+        <Success></Success>
+      </div>
+    
     
     
     
     <!-- 列表 -->
-    <el-table ref="multipleTable" align-center :data="tableData" tooltip-effect="dark" style="width: 100%;margin-top:20px" @selection-change="handleSelectionChange">
-      <el-table-column type="selection" width="80" label="全选"></el-table-column>
-      <el-table-column label="商品描述" width="400" prop="describe"></el-table-column>
-      <el-table-column prop="color" label="颜色" width="120"></el-table-column>
-      <el-table-column prop="size" label="尺码" width="120"></el-table-column>
-      <el-table-column prop="sun" label="数量" width="120"></el-table-column>
-      <el-table-column prop="price" label="单价" width="120"></el-table-column>
-      <el-table-column prop="total_price" label="总价" width="120"></el-table-column>
+    
       
-    </el-table>
+    
 
     <el-button style="margin-top: 12px;" @click="next">结算</el-button>
     
   </div>
   
 </template>
-
 <script>
 // @ is an alias to /src
+import Shopping from "@/components/front-end/Shopcart/shopping.vue"
+import Order from "@/components/front-end/Shopcart/Order.vue"
+import Pay from "@/components/front-end/Shopcart/Pay.vue"
+import Success from "@/components/front-end/Shopcart/Success.vue"
+
+
 
 
 export default {
   name: 'ShopCar',
   components: {
-
+    Shopping,Order,Pay,Success,
   },
   data() {
       return {
@@ -91,10 +101,10 @@ export default {
   margin-right: 5px;
 }
 
-.Step{
+/* .el-step{
   padding-top: 20px;
   width: 100%;
-  height: 80px;
+  
   background-color: #f3f3f3;
-}
+} */
 </style>
