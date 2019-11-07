@@ -5,12 +5,7 @@
     <list default="true" id="19572343-f58d-43a8-8243-cbd8a5fba8d1" name="Default Changelist" comment="" />
 =======
     <list default="true" id="19572343-f58d-43a8-8243-cbd8a5fba8d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front-end/src/views/front-page/Details.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/views/front-page/First.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/views/front-page/List.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/views/front-page/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/views/front-page/Person.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/src/views/front-page/ShopCar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/front-end/src/views/front-page/readme.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/views/front-page/readme.vue" afterDir="false" />
@@ -29,8 +24,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
+=======
   <component name="ProjectId" id="1TBcMDi8TBzqWKLYDzf5pcRdAv7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> 373774c9adefafbd38da3e8f202bdbc663305af1
 =======
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -190,6 +188,7 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -201,6 +200,9 @@
       <path value="$PROJECT_DIR$/front-end/package.json" />
     </packageJsonPaths>
   </component>
+=======
+>>>>>>> 6a0b8975e0b55a23afa6bd2a2ad9b192e854b9af
+>>>>>>> b8d1b6bf3c439ca9e9a5a7ad69cf3d83eb453e0e
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="401" />
     <option name="y" value="30" />
@@ -210,6 +212,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+<<<<<<< HEAD
+  <component name="ProjectId" id="1TBuj7rLPM6DbTBkAXur5L23KnO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -270,7 +276,11 @@
       </pane>
     </panes>
   </component>
+<<<<<<< HEAD
+>>>>>>> 6a0b8975e0b55a23afa6bd2a2ad9b192e854b9af
+=======
 >>>>>>> 053d18ad120a27e397b693d947bbea9434422606
+>>>>>>> 373774c9adefafbd38da3e8f202bdbc663305af1
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -343,6 +353,25 @@
 >>>>>>> 6a0b8975e0b55a23afa6bd2a2ad9b192e854b9af
 =======
       <workItem from="1572936687181" duration="6528000" />
+<<<<<<< HEAD
+      <workItem from="1572945987712" duration="385000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+=======
 >>>>>>> 053d18ad120a27e397b693d947bbea9434422606
     </task>
     <servers />
@@ -595,6 +624,7 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/front-end/.gitignore" />
     <entry file="file://$PROJECT_DIR$/front-end/src/views/front-page/readme.vue">
       <provider selected="true" editor-type-id="text-editor">
@@ -638,5 +668,11 @@
 =======
 >>>>>>> 053d18ad120a27e397b693d947bbea9434422606
 >>>>>>> f2d69a0bc3b9db75eb6112fd790e271f6ae4d1ac
+=======
+>>>>>>> 6a0b8975e0b55a23afa6bd2a2ad9b192e854b9af
+=======
+>>>>>>> 053d18ad120a27e397b693d947bbea9434422606
+>>>>>>> 373774c9adefafbd38da3e8f202bdbc663305af1
+>>>>>>> b8d1b6bf3c439ca9e9a5a7ad69cf3d83eb453e0e
   </component>
 </project>

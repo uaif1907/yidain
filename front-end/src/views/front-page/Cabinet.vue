@@ -1,17 +1,17 @@
 <template>
   <div class="list-box">
-      <Chair></Chair>
+      <Cabinet></Cabinet>
   </div>
 </template>
 
 <script>
   // @ is an alias to /src
-    import Chair from '@/components/front-end/List/Chair.vue'
+    import Cabinet from '@/components/front-end/List/Cabinet.vue'
 
   export default {
     name: 'lists',
     components: {
-        Chair
+        Cabinet
     }
   }
 </script>
