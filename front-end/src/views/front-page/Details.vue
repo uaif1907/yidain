@@ -64,17 +64,18 @@
         </div>
       </div>
     </div>
+    <Recommend></Recommend>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
+import Recommend from '@/components/front-end/recommend/Recommend.vue'
 
 export default {
   name: 'detail',
   components: {
-
+    Recommend,
   },
   data() {
       return {
@@ -126,5 +127,6 @@ export default {
     padding-top: 25px;
     font-size: 12px;
     line-height: 20px;
+    color:#979797;
   }
 </style>
