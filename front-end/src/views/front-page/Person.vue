@@ -114,7 +114,9 @@
           <div class="tx_text">青 花 瓷 的 秘 密</div>
           <div class="tx_text2">我们不相信会有完美无缺的家，要相信自己可以~~<i class="el-icon-edit" style="margin-left: 5px"></i></div>
           <div class="tx_talk" style="position: absolute;right: 150px;top:30px"><img src="../../assets/person_img/图层81.png" alt=""></div>
-          <div class="tx_shop" style="position: absolute;right: 80px;top:30px"><img src="../../assets/person_img/购物袋拷贝.png" alt=""><div class="yuan2">4</div></div>
+          <router-link :to="{name:'shopcar'}" tag="div">
+            <div class="tx_shop" style="position: absolute;right: 80px;top:30px"><img src="../../assets/person_img/购物袋拷贝.png" alt=""><div class="yuan2">4</div></div>
+          </router-link>
           <div class="textboxs">
             <div class="textbox1">
               <div class="textone">
@@ -201,7 +203,7 @@
               <div class="con_money">699.00 <span>RMB</span></div>
               <div class="con_status">
                 <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
-                <div style="font-weight: 600;position: absolute;top: 25px;left:0">代发货</div>
+                <div style="font-weight: 600;position: absolute;top: 25px;left:0">待发货</div>
               </div>
               <div class="con_button">
                 <el-button type="info">查看物流</el-button>
@@ -230,7 +232,7 @@
               <div class="con_money">699.00 <span>RMB</span></div>
               <div class="con_status">
                 <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
-                <div style="font-weight: 600;position: absolute;top: 25px;left:0">代发货</div>
+                <div style="font-weight: 600;position: absolute;top: 25px;left:0">待发货</div>
               </div>
               <div class="con_button">
                 <el-button type="info">查看物流</el-button>
@@ -259,7 +261,7 @@
               <div class="con_money">699.00 <span>RMB</span></div>
               <div class="con_status">
                 <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
-                <div style="font-weight: 600;position: absolute;top: 25px;left:0">代发货</div>
+                <div style="font-weight: 600;position: absolute;top: 25px;left:0">待发货</div>
               </div>
               <div class="con_button">
                 <el-button type="info">查看物流</el-button>
@@ -288,7 +290,7 @@
               <div class="con_money">699.00 <span>RMB</span></div>
               <div class="con_status">
                 <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
-                <div style="font-weight: 600;position: absolute;top: 25px;left:0">代发货</div>
+                <div style="font-weight: 600;position: absolute;top: 25px;left:0">待发货</div>
               </div>
               <div class="con_button">
                 <el-button type="info">查看物流</el-button>
@@ -309,19 +311,20 @@
 
         </div>
       </div>
+
     </div>
-    <!--    <recommend></recommend>-->
+    <recommend style="margin-top: 1200px"></recommend>
   </div>
 </template>
 
 <script>
   // @ is an alias to /src
-  // import recommend from "@/components/front-end/recommend/Recommend.vue"
+  import recommend from "@/components/front-end/recommend/Recommend.vue"
 
   export default {
     name: 'person-box',
     components: {
-      // recommend,
+      recommend,
     },
     // data(){
     //   return {

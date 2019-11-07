@@ -1,24 +1,16 @@
 <template>
   <div class="basis-box">
     <el-container>
-      <el-header style="background-color: #f3f3f3;">
-        <Header></Header>
-      </el-header>
+      <el-header>Header</el-header>
       <el-main>
         <el-container>
-          <el-header class="headers-box">
-            <Nav></Nav>
-          </el-header>
-          <el-main style="margin: 0 auto">
+          <el-header>Header</el-header>
+          <el-main style="width: 1200px;margin: 0 auto">
             <router-view></router-view>
           </el-main>
         </el-container>
       </el-main>
-      <el-footer>
-
-        <Fotter></Fotter>
-
-      </el-footer>
+      <el-footer>Footer</el-footer>
     </el-container>
   </div>
 
@@ -28,15 +20,9 @@
   // @ is an alias to /src
 
 
-  import Header from '@/components/front-end/header.vue'
-  import Nav from '@/components/front-end/nav.vue'
-  import Fotter from '@/components/front-end/fotter.vue'
   export default {
     name: 'home',
     components: {
-      Header,
-      Nav,
-      Fotter
 
     }
   }
@@ -47,9 +33,8 @@
     height: 100%;
 
   }
-
-  .el-header{
-
+  .el-header, .el-footer {
+    background-color: #B3C0D1;
     color: #333;
     text-align: center;
     line-height: 60px;
@@ -61,6 +46,7 @@
 
     padding: 0!important;
   }
+
 
   .el-footer{
     width: 1200px;
@@ -95,4 +81,5 @@
   .input-box .el-input__inner {
     border: 1px solid #a9a9a9!important;
   }
+
 </style>
