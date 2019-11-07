@@ -50,35 +50,35 @@
 
 <!--                           弹出-->
                            <el-dialog title="· 收货地址 ·" :visible.sync="dialogFormVisible" width="40%">
-                              <el-form :model="form" inline="true">
+                              <el-form :model="form" :inline="true">
                                 <el-form-item label="姓名" :label-width="formLabelWidth">
-                                  <el-input v-model="form.name" autocomplete="off" style="width: 460px"></el-input>
+                                  <el-input v-model="orderform.name" autocomplete="off" style="width: 460px"></el-input>
                                 </el-form-item>
                                   <el-form-item label="电话" :label-width="formLabelWidth">
-                                  <el-input v-model="form.tel" autocomplete="off" style="width: 460px"></el-input>
+                                  <el-input v-model="orderform.tel" autocomplete="off" style="width: 460px"></el-input>
                                 </el-form-item>
                                   <el-row>
                                       <el-form-item label="省" :label-width="formLabelWidth" >
-                                  <el-select v-model="form.region" style="width: 90px">
+                                  <el-select v-model="orderform.region" style="width: 90px">
                                     <el-option label="区域一" value="shanghai"></el-option>
                                     <el-option label="区域二" value="beijing"></el-option>
                                   </el-select>
                                 </el-form-item>
                                       <el-form-item label="市" :label-width="formLabelWidth">
-                                  <el-select v-model="form.region" style="width: 90px">
+                                  <el-select v-model="orderform.region" style="width: 90px">
                                     <el-option label="区域一" value="shanghai"></el-option>
                                     <el-option label="区域二" value="beijing"></el-option>
                                   </el-select>
                                 </el-form-item>
                                       <el-form-item label="区" :label-width="formLabelWidth">
-                                  <el-select v-model="form.region" style="width: 90px">
+                                  <el-select v-model="orderform.region" style="width: 90px">
                                     <el-option label="区域一" value="shanghai"></el-option>
                                     <el-option label="区域二" value="beijing"></el-option>
                                   </el-select>
                                 </el-form-item>
                                   </el-row>
                                 <el-form-item label="街道地址" label-width="80px">
-                                  <el-select v-model="form.region" style="width: 460px">
+                                  <el-select v-model="orderform.region" style="width: 460px">
                                     <el-option label="区域一" value="shanghai"></el-option>
                                     <el-option label="区域二" value="beijing"></el-option>
                                   </el-select>
@@ -145,7 +145,7 @@ export default {
     data() {
       return {
         dialogFormVisible: false,
-          form: {
+          orderform: {
           name: '',
               tel:'',
           region: '',
