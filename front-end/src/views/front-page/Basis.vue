@@ -76,7 +76,7 @@
   .el-carousel__container{
     height: 500px!important;
   }
-  .el-input__inner{
+  .input-box .el-input__inner{
     border-radius: 20px;
   }
   .el-radio-button__inner{
