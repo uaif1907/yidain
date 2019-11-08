@@ -25,9 +25,7 @@
 </template>
 
 <script>
-  // @ is an alias to /src
-
-
+  // @ is an alias to c
   import Header from '@/components/front-end/header.vue'
   import Nav from '@/components/front-end/nav.vue'
   import Fotter from '@/components/front-end/fotter.vue'
@@ -37,7 +35,6 @@
       Header,
       Nav,
       Fotter
-
     }
   }
 </script>
@@ -45,38 +42,30 @@
   .basis-box{
     width: 100%;
     height: 100%;
-
   }
-
   .el-header{
-
     color: #333;
     text-align: center;
     line-height: 60px;
   }
-
   .el-main {
     color: #333;
     text-align: center;
-
     padding: 0!important;
   }
-
   .el-footer{
     width: 1200px;
     height: 270px!important;
     margin: 0 auto;
     padding: 0!important;
   }
-
   .headers-box{
     height: 80px!important;
-
   }
   .el-carousel__container{
     height: 500px!important;
   }
-  .input-box .el-input__inner{
+   .input-box .el-input__inner{
     border-radius: 20px;
   }
   .el-radio-button__inner{

@@ -12,7 +12,7 @@
             </el-col>
             <el-col :span="16" style="height: 80px">
                 <el-row :span="24">
-                    <el-col :span="20" style="height: 80px;float: right;">
+                    <el-col :span="22" style="height: 80px;float: right;">
                         <el-row :span="24">
                             <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" active-text-color="#333333" style="display:flex;height: 80px;justify-content: space-between">
                                 <el-menu-item index="1">
@@ -23,26 +23,44 @@
                                 </el-menu-item>
                                 <el-menu-item index="2">
                                     <router-link :to="{name:'chair'}" tag="div">
-                                        <p style="height: 20px">座椅</p>
-                                        <p class="zi">Seat</p>
+                                        <p style="height: 20px">客厅</p>
+                                        <p class="zi">Parlour</p>
                                     </router-link>
                                 </el-menu-item>
                                 <el-menu-item index="3">
                                     <router-link :to="{name:'bed'}" tag="div">
-                                        <p style="height: 20px">床</p>
-                                        <p class="zi">Seat bed</p>
+                                        <p style="height: 20px">厨房</p>
+                                        <p class="zi">Kitchen</p>
                                     </router-link>
                                 </el-menu-item>
                                 <el-menu-item index="4">
                                     <router-link :to="{name:'cabinet'}" tag="div">
-                                        <p style="height: 20px">柜子</p>
-                                        <p class="zi">Seat cabinets</p>
+                                        <p style="height: 20px">卫生间</p>
+                                        <p class="zi">Toilet</p>
                                     </router-link>
                                 </el-menu-item>
                                 <el-menu-item index="5">
                                     <router-link :to="{name:'edge'}" tag="div">
-                                        <p style="height: 20px">边几</p>
-                                        <p class="zi">Seat Edge Several</p>
+                                        <p style="height: 20px">卧室</p>
+                                        <p class="zi">Bedrooml</p>
+                                    </router-link>
+                                </el-menu-item>
+                                <el-menu-item index="6">
+                                    <router-link :to="{name:'edge'}" tag="div">
+                                        <p style="height: 20px">书房</p>
+                                        <p class="zi">Study</p>
+                                    </router-link>
+                                </el-menu-item>
+                                <el-menu-item index="7">
+                                    <router-link :to="{name:'edge'}" tag="div">
+                                        <p style="height: 20px">阳台</p>
+                                        <p class="zi">Balcony</p>
+                                    </router-link>
+                                </el-menu-item>
+                                <el-menu-item index="8">
+                                    <router-link :to="{name:'edge'}" tag="div">
+                                        <p style="height: 20px">餐厅</p>
+                                        <p class="zi">Restaurant</p>
                                     </router-link>
                                 </el-menu-item>
 

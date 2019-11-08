@@ -110,35 +110,35 @@
     background: -webkit-linear-gradient(left,#46df8c,#46df8c);
   }
   .hua .el-slider__button{
-    border: 2px solid #37c87d;
+    border: 2px solid #37c87d!important;
     box-shadow: 0 0 10px #37c87d;
   }
   .sf .el-slider__bar{
     background: -webkit-linear-gradient(left,#ff4145,#ff8190);
   }
   .sf .el-slider__button{
-    border: 2px solid #ff4145;
+    border: 2px solid #ff4145!important;
     box-shadow: 0 0 10px #ff4145;
   }
   .cj .el-slider__bar{
     background: -webkit-linear-gradient(left,#68c0fc,#90ecfd);
   }
   .cj .el-slider__button{
-    border: 2px solid #68c0fc;
+    border: 2px solid #68c0fc!important;
     box-shadow: 0 0 10px #68c0fc;
   }
   .dj .el-slider__bar{
     background: -webkit-linear-gradient(left,#f7cd82,#fcdb7e);
   }
   .dj .el-slider__button{
-    border: 2px solid #f7cd82;
+    border: 2px solid #f7cd82!important;
     box-shadow: 0 0 10px #f7cd82;
   }
   .gj .el-slider__bar{
     background: -webkit-linear-gradient(left,#cc78e7,#fca3f9);
   }
   .gj .el-slider__button{
-    border: 2px solid #cc78e7;
+    border: 2px solid #cc78e7!important;
     box-shadow: 0 0 10px #cc78e7;
   }
   .el-upload--picture-card{
