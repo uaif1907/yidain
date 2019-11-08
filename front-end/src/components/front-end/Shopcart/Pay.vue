@@ -17,7 +17,7 @@
                        <p>～ 订单提交成功啦，赶紧付款吧</p>
                    </div>
                    <div>
-                      <div style="float: left">～</div>  <div class="dsq">定时器</div> 后将自动取消订单
+                      <div style="float: left">～</div>  <div class="dsq">min</div> 后将自动取消订单
                    </div>
                    <div class="ord-text">
                        <span>～ 订单号是：</span>
@@ -45,8 +45,18 @@
                     <div style="width: 67px;height:67px;background-color: #5ed5e0;color: white;opacity: 0.9;border-radius: 100%;text-align:center;font-size:30px;line-height:70px;position:absolute;left: 95px;top:65px;z-index: -1"><span style="opacity: 0.7">02</span></div>
                 </div>
                 <div style="margin-top: 50px">
-                    <el-button type="info" plain style="width: 570px;height: 70px">快捷支付(点击第三方设备进行付款)</el-button>
-                 <el-button type="info" plain  style="width: 570px;height: 70px">扫码支付</el-button>
+                    <el-row>
+                        <el-radio v-model="radio" label="1"  border  style="width: 570px;height: 70px;line-height: 45px;margin-top: 20px;background-color: #f6f6f6">快捷支付(点击第三方设备进行付款)</el-radio>
+                        <el-radio  v-model="radio" label="2" border  style="width: 570px;height: 70px;line-height: 45px;margin-top: 20px ;background-color: #f6f6f6">扫码支付</el-radio>
+                    </el-row>
+                    <el-row  style="margin: 20px;text-align: left;margin-left: 50px">
+                        <el-radio v-model="radio1" label="1"><img src="../../../assets/shopcart/图层65.png" alt=""></el-radio>
+                        <el-radio v-model="radio1" label="2"><img src="../../../assets/shopcart/图层66.png" alt=""></el-radio>
+                    </el-row>
+                    <el-row>
+                        <el-radio  v-model="radio" label="3" border  style="width: 1180px;height: 70px;line-height: 45px;margin-top: 20px ;background-color: #f6f6f6">网银支付</el-radio>
+                    </el-row>
+
                 </div>
 
             </div>
@@ -105,8 +115,12 @@
 <script>
 export default {
     name:'shopping',
-    component:{
-        
+     data () {
+      return {
+        radio: '1',
+          radio1:'1',
+
+      };
     }
 }
 </script>
