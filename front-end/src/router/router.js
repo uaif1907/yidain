@@ -43,19 +43,19 @@ const routes = [
         component: () => import('../views/front-page/Chair.vue'),
 
       },
-        {
+      {
         path: 'bed',
         name: 'bed',// 床页
         component: () => import('../views/front-page/Bed.vue'),
 
       },
-        {
+      {
         path: 'cabinet',
         name: 'cabinet',// 柜子页
         component: () => import('../views/front-page/Cabinet.vue'),
 
       },
-        {
+      {
         path: 'edge',
         name: 'edge',// 边几页
         component: () => import('../views/front-page/Edge.vue'),
@@ -65,6 +65,24 @@ const routes = [
         path: 'person',
         name: 'person',// 个人中心页
         component: () => import('../views/front-page/Person.vue'),
+        children:[
+          {
+            path:'one',
+            name:'one',
+            component:() => import('../components/front-end/person/one.vue')
+          },
+          {
+            path:'two',
+            name:'two',
+            component:() => import('../components/front-end/person/two.vue')
+          },
+          {
+            path:'three',
+            name:'three',
+            component:() => import('../components/front-end/person/three.vue')
+          },
+
+        ]
 
       },
       {
