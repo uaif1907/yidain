@@ -65,6 +65,7 @@ const routes = [
         path: 'person',
         name: 'person',// 个人中心页
         component: () => import('../views/front-page/Person.vue'),
+        redirect: '/person/one' ,
         children:[
           {
             path:'one',
