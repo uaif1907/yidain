@@ -38,11 +38,12 @@ const routes = [
 
       },
       {
-        path: 'chair',
-        name: 'chair',// 座椅页
-        component: () => import('../views/front-page/Chair.vue'),
+        path: 'parlour',
+        name: 'parlour',// 客厅
+        component: () => import('../views/front-page/Parlour.vue'),
 
       },
+<<<<<<< HEAD
       {
         path: 'bed',
         name: 'bed',// 床页
@@ -59,8 +60,39 @@ const routes = [
         path: 'edge',
         name: 'edge',// 边几页
         component: () => import('../views/front-page/Edge.vue'),
+=======
+        {
+        path: 'kitchen',
+        name: 'kitchen',// 厨房
+        component: () => import('../views/front-page/Kitchen.vue'),
 
       },
+        {
+        path: 'toilet',
+        name: 'toilet',// 卫生间
+        component: () => import('../views/front-page/Toilet.vue'),
+
+      },
+        {
+        path: 'bedrooml',
+        name: 'bedrooml',// 卧室
+        component: () => import('../views/front-page/Bedrooml.vue'),
+>>>>>>> c7c38ca96856c451dfa8f1bbe385b43aabb06cfd
+
+      },
+        {
+        path: 'balcony',
+        name: 'balcony',// 阳台
+        component: () => import('../views/front-page/Balcony.vue'),
+
+      },
+        {
+        path: 'restaurant',
+        name: 'restaurant',// 餐厅
+        component: () => import('../views/front-page/Restaurant.vue'),
+
+      },
+
       {
         path: 'person',
         name: 'person',// 个人中心页

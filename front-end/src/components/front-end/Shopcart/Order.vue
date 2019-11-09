@@ -50,7 +50,7 @@
 
 <!--                           弹出-->
                            <el-dialog title="· 收货地址 ·" :visible.sync="dialogFormVisible" width="40%">
-                              <el-form :model="form" :inline="true">
+                              <el-form :model="orderform" :inline="true">
                                 <el-form-item label="姓名" :label-width="formLabelWidth">
                                   <el-input v-model="orderform.name" autocomplete="off" style="width: 460px"></el-input>
                                 </el-form-item>
@@ -86,8 +86,8 @@
                               </el-form>
 
                               <div slot="footer" class="dialog-footer" style="margin: 0 auto">
-                                  <el-button type="info" @click="dialogVisible = false">保存</el-button>
-                                <el-button type="info" plain @click="dialogVisible = false">取 消</el-button>
+                                  <el-button type="info" @click="dialogFormVisible = false">保存</el-button>
+                                <el-button type="info" plain @click="dialogFormVisible = false">取 消</el-button>
 
                               </div>
                             </el-dialog>
@@ -98,8 +98,8 @@
            </div>
         </el-row>
         <el-row>
-            <div style="width: 1200px;height: 400px">
-                <div style="text-align: left;padding: 100px 10px;padding-bottom: 0;position: relative;">
+            <div style="width: 1200px">
+                <div style="text-align: left;padding: 100px 10px;padding-bottom: 20px;position: relative;">
                     <img src="../../../assets/shopcart/图层46拷贝2.png" alt="" style="float: left">
                     <div style="width: 2px;height: 20px;background:#ccc;border-radius: 10px;float: left;margin-top: 5px;margin-left: 5px"></div>
                     <div style="float: left;margin-left: 10px">
@@ -108,8 +108,12 @@
                     </div>
                     <div style="width: 67px;height:67px;background-color: #5ed5e0;color: white;opacity: 0.9;border-radius: 100%;text-align:center;font-size:30px;line-height:70px;position:absolute;left: 95px;top:65px;z-index: -1"><span style="opacity: 0.7">02</span></div>
                 </div>
-
-
+                <div >
+                    <div style="width: 1200px;margin-top: 20px;">
+                        <el-button type="text" style="color: #4c4c4c;float: right">返回购物车修改 > </el-button>
+                    </div>
+                    <Shoping></Shoping>
+                </div>
             </div>
         </el-row>
     </div>
@@ -140,10 +144,12 @@
     }
 </style>
 <script>
+    import Shoping from "@/components/front-end/Shopcart/shopping.vue"
 export default {
     name:'shopping',
     data() {
       return {
+
         dialogFormVisible: false,
           orderform: {
           name: '',
@@ -159,8 +165,9 @@ export default {
           formLabelWidth: '80px',
       };
     },
-    component:{
-        
-    }
+    components:{
+        Shoping,
+    },
+
 }
 </script>
