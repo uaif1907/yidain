@@ -10,7 +10,7 @@
                 </div>
                 <div class="block">
                     <span class="demonstration">座椅</span>
-                    <el-slider v-model="value1" :show-tooltip="false" class="hua"></el-slider>
+                    <el-slider v-model="value1" :show-tooltip="false" class="hua" disabled></el-slider>
                     <div class="you">
                         <p>60%</p>
                         <p>2453件</p>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="block">
                     <span class="demonstration">沙发</span>
-                    <el-slider v-model="value2" :show-tooltip="false" class="sf"></el-slider>
+                    <el-slider v-model="value2" :show-tooltip="false" class="sf" disabled></el-slider>
                     <div class="you">
                         <p>40%</p>
                         <p>2110件</p>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="block">
                     <span class="demonstration">床具</span>
-                    <el-slider v-model="value3" :show-tooltip="false" class="cj"></el-slider>
+                    <el-slider v-model="value3" :show-tooltip="false" class="cj" disabled></el-slider>
                     <div class="you">
                         <p>40%</p>
                         <p>2110件</p>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="block">
                     <span class="demonstration">灯具</span>
-                    <el-slider v-model="value4" :show-tooltip="false" class="dj"></el-slider>
+                    <el-slider v-model="value4" :show-tooltip="false" class="dj" disabled></el-slider>
                     <div class="you">
                         <p>70%</p>
                         <p>2643件</p>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="block">
                     <span class="demonstration">柜具</span>
-                    <el-slider v-model="value5" :show-tooltip="false" class="gj"></el-slider>
+                    <el-slider v-model="value5" :show-tooltip="false" class="gj" disabled></el-slider>
                     <div class="you">
                         <p>70%</p>
                         <p>2643件</p>

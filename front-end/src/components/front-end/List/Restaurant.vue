@@ -19,7 +19,7 @@
                         </div>
                         <el-breadcrumb separator="/" class="size-box">
                             <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ name:'chair'}">座椅</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ name:'cabinet'}">柜子</el-breadcrumb-item>
                         </el-breadcrumb>
                         <div class="tu-box">
                             <i class="el-icon-arrow-up"></i>

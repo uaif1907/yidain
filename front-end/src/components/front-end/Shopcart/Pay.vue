@@ -17,7 +17,12 @@
                        <p>～ 订单提交成功啦，赶紧付款吧</p>
                    </div>
                    <div>
-                      <div style="float: left">～</div>  <div class="dsq">定时器</div> 后将自动取消订单
+                      <div style="float: left">～</div>
+                       <div class="dsq" >
+                            <div >   30<span>min</span></div>
+                           <div>   00 <span>s</span></div>
+                           <div>   00 <span>ms</span></div>
+                       </div> 后将自动取消订单
                    </div>
                    <div class="ord-text">
                        <span>～ 订单号是：</span>
@@ -45,8 +50,18 @@
                     <div style="width: 67px;height:67px;background-color: #5ed5e0;color: white;opacity: 0.9;border-radius: 100%;text-align:center;font-size:30px;line-height:70px;position:absolute;left: 95px;top:65px;z-index: -1"><span style="opacity: 0.7">02</span></div>
                 </div>
                 <div style="margin-top: 50px">
-                    <el-button type="info" plain style="width: 570px;height: 70px">快捷支付(点击第三方设备进行付款)</el-button>
-                 <el-button type="info" plain  style="width: 570px;height: 70px">扫码支付</el-button>
+                    <el-row>
+                        <el-radio v-model="radio" label="1"  border  style="width: 570px;height: 70px;line-height: 45px;margin-top: 20px;background-color: #f6f6f6">快捷支付(点击第三方设备进行付款)</el-radio>
+                        <el-radio  v-model="radio" label="2" border  style="width: 570px;height: 70px;line-height: 45px;margin-top: 20px ;background-color: #f6f6f6">扫码支付</el-radio>
+                    </el-row>
+                    <el-row  style="margin: 20px;text-align: left;margin-left: 50px">
+                        <el-radio v-model="radio1" label="1"><img src="../../../assets/shopcart/图层65.png" alt=""></el-radio>
+                        <el-radio v-model="radio1" label="2"><img src="../../../assets/shopcart/图层66.png" alt=""></el-radio>
+                    </el-row>
+                    <el-row>
+                        <el-radio  v-model="radio" label="3" border  style="width: 1180px;height: 70px;line-height: 45px;margin-top: 20px ;background-color: #f6f6f6">网银支付</el-radio>
+                    </el-row>
+
                 </div>
 
             </div>
@@ -73,6 +88,23 @@
         border: 1px solid #e5e5e5;
         float: left;
         margin-right: 25px;
+        text-align: center;
+        line-height: 38px;
+    }
+    .dsq > div{
+        float: left;
+        width: 83px;
+        border-right:2px solid #ffdede ;
+        font-size: 20px;
+        font-weight: 600;
+        color: red;
+    }
+    .dsq :nth-child(3){
+        border-right: none;
+    }
+    .dsq>div>span{
+        font-size: 10px;
+        color: black;
     }
     .ord-text{
         margin-top: 28px;
@@ -105,8 +137,29 @@
 <script>
 export default {
     name:'shopping',
-    component:{
-        
-    }
+     data () {
+      return {
+        radio: '1',
+          radio1:'1',
+
+      };
+    },
+    // created(){
+    //     this.Time()
+    // },
+    // Time(){
+    //     setInterval(()=>{let now = new Date()})
+    //     let future = new Date("2019-11-8 8:00:45")
+    //     let offset = Math.floor((future.getTime()-now.getTime())/1000) //天
+    //     let hourNum = Math.floor(offset/(60*60))
+    //     this.hour=hourNum
+    //     let minNum = Math.floor((offset)%(60*60)/60)
+    //     this.minute = minNum
+    //     let secNum = Math.floor(offset%(60*60)%60)
+    //     this.sec = secNum
+    //     this.time['hour'] = this.hour
+    //     this.time['minute'] = this.minute
+    //     this.time['sec'] = this.sec
+    // }
 }
 </script>
