@@ -62,12 +62,19 @@
           </div>
         </div>
         <div style="display:flex;margin-top:40px;">
-          <el-button style="width:150px;background-color:#5ed5e0;color:white;boeder-radius:0px;">立即购买</el-button>
-          <el-button style="width:150px;margin-left:20px;">加入购物车</el-button>
+          <el-button style="width:150px;background-color:#5ed5e0;color:white;border-radius:0px;">立即购买</el-button>
+          <el-button style="width:150px;margin-left:20px;border-radius:0px;">加入购物车</el-button>
         </div>
       </div>
     </div>
-
+    <div style="padding-top:100px;">
+      <img src="../../assets/details-img/detail.png" alt="" style="width:400px;height:80px;">
+    </div>
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <Recommend></Recommend>
   </div>
 </template>
