@@ -22,43 +22,37 @@
                                     </router-link>
                                 </el-menu-item>
                                 <el-menu-item index="2">
-                                    <router-link :to="{name:'chair'}" tag="div">
+                                    <router-link :to="{name:'parlour'}" tag="div">
                                         <p style="height: 20px">客厅</p>
                                         <p class="zi">Parlour</p>
                                     </router-link>
                                 </el-menu-item>
                                 <el-menu-item index="3">
-                                    <router-link :to="{name:'bed'}" tag="div">
+                                    <router-link :to="{name:'kitchen'}" tag="div">
                                         <p style="height: 20px">厨房</p>
                                         <p class="zi">Kitchen</p>
                                     </router-link>
                                 </el-menu-item>
                                 <el-menu-item index="4">
-                                    <router-link :to="{name:'cabinet'}" tag="div">
+                                    <router-link :to="{name:'toilet'}" tag="div">
                                         <p style="height: 20px">卫生间</p>
                                         <p class="zi">Toilet</p>
                                     </router-link>
                                 </el-menu-item>
                                 <el-menu-item index="5">
-                                    <router-link :to="{name:'edge'}" tag="div">
+                                    <router-link :to="{name:'bedrooml'}" tag="div">
                                         <p style="height: 20px">卧室</p>
                                         <p class="zi">Bedrooml</p>
                                     </router-link>
                                 </el-menu-item>
                                 <el-menu-item index="6">
-                                    <router-link :to="{name:'edge'}" tag="div">
-                                        <p style="height: 20px">书房</p>
-                                        <p class="zi">Study</p>
-                                    </router-link>
-                                </el-menu-item>
-                                <el-menu-item index="7">
-                                    <router-link :to="{name:'edge'}" tag="div">
+                                    <router-link :to="{name:'balcony'}" tag="div">
                                         <p style="height: 20px">阳台</p>
                                         <p class="zi">Balcony</p>
                                     </router-link>
                                 </el-menu-item>
-                                <el-menu-item index="8">
-                                    <router-link :to="{name:'edge'}" tag="div">
+                                <el-menu-item index="7">
+                                    <router-link :to="{name:'restaurant'}" tag="div">
                                         <p style="height: 20px">餐厅</p>
                                         <p class="zi">Restaurant</p>
                                     </router-link>

@@ -6,7 +6,7 @@
             </el-carousel-item>
         </el-carousel>
         <!--查询-->
-        <el-row :span="24" style="height: 456px;">
+        <el-row :span="24" style="height: auto;">
             <el-row :span="24" style="height: 124px;padding: 30px 0">
                 <el-col :span="6" style="display: flex">
                     <span class="round"></span>
@@ -19,7 +19,7 @@
                         </div>
                         <el-breadcrumb separator="/" class="size-box">
                             <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ name:'chair'}">客厅</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ name:'parlour'}">客厅</el-breadcrumb-item>
                         </el-breadcrumb>
                         <div class="tu-box">
                             <i class="el-icon-arrow-up"></i>
@@ -28,7 +28,7 @@
                     </el-col>
                 </el-col>
             </el-row>
-            <el-row :span="24" style="height: 332px">
+            <el-row :span="24" style="height: auto">
                 <el-form ref="form" :model="form" label-width="80px" class="form-box">
                     <el-col :span="10" class="input-box">
                         <el-form-item label="排序">
@@ -49,40 +49,140 @@
                             </el-col>
                         </el-form-item>
                     </el-col>
-                    <el-col :span="10">
-                        <el-form-item label="面料材质" prop="ml">
-                            <el-radio-group v-model="form.ml" style="margin-bottom: 20px;" class="button-box">
-                                <el-radio-button :label="true">网布</el-radio-button>
-                                <el-radio-button :label="false">牛皮</el-radio-button>
-                                <el-radio-button>绒布</el-radio-button>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="10" class="tie-box">
-                        <el-form-item label="风格" prop="fg">
-                            <el-radio-group v-model="form.fg" style="margin-bottom: 20px;" class="button-box">
-                                <el-radio-button :label="true">日式</el-radio-button>
-                                <el-radio-button :label="false">北欧</el-radio-button>
-                                <el-radio-button>新中式</el-radio-button>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="10">
-                        <el-form-item label="适用人数" prop="people">
-                            <el-radio-group v-model="form.people" style="margin-bottom: 20px;" class="button-box">
-                                <el-radio-button :label="true">单人</el-radio-button>
-                                <el-radio-button :label="false">双人</el-radio-button>
-                                <el-radio-button>三人</el-radio-button>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="10" class="tie-box">
-                        <el-form-item label="五星脚材质" prop="cz">
-                            <el-radio-group v-model="form.cz" style="margin-bottom: 20px" class="button-box">
-                                <el-radio-button :label="true">铁脚艺</el-radio-button>
-                                <el-radio-button :label="false">实木脚</el-radio-button>
-                            </el-radio-group>
-                        </el-form-item>
+                    <el-col :span="24">
+                        <div class="tu-box" style="margin-left: 50px!important;">
+                            <i class="el-icon-arrow-up"></i>
+                            <i class="el-icon-arrow-down"></i>
+                            <i class="el-icon-arrow-up"></i>
+                            <i class="el-icon-arrow-down"></i>
+                        </div>
+                        <el-col style="display: flex;justify-content: space-around;margin-left: 50px;" :span="4">
+                            <div>客厅：</div>
+                            <div @click="sofas()">沙发</div>|
+                            <div @click="tvcabinets()">电视柜</div>|
+                            <div @click="teapoys()">茶几</div>
+                        </el-col>
+                        <div class="tu-box" style="margin-top: 24px;margin-left: 50px">
+                            <i class="el-icon-arrow-up"></i>
+                            <i class="el-icon-arrow-down"></i>
+                        </div>
+                        <!--沙发-->
+                        <el-col :span="24" style="display: flex; margin-top: 10px;flex-wrap: wrap;justify-content: space-around">
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="sofa" class="transition-box">
+                                    <el-form-item label="面料" prop="ml">
+                                        <el-radio-group v-model="form.ml" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">网布</el-radio-button>
+                                            <el-radio-button :label="false">牛皮</el-radio-button>
+                                            <el-radio-button>绒布</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="sofa" class="tie-box">
+                                    <el-form-item label="风格" prop="fg">
+                                        <el-radio-group v-model="form.fg" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">日式</el-radio-button>
+                                            <el-radio-button :label="false">北欧</el-radio-button>
+                                            <el-radio-button>新中式</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="sofa" class="transition-box">
+                                    <el-form-item label="材质" prop="people">
+                                        <el-radio-group v-model="form.people" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">红木</el-radio-button>
+                                            <el-radio-button :label="false">柏木</el-radio-button>
+                                            <el-radio-button>松木</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+<!--                            <transition name="el-fade-in-linear">-->
+<!--                                <el-col :span="10" v-show="sofa" class="tie-box">-->
+<!--                                    <el-form-item label="五星脚材质" prop="cz">-->
+<!--                                        <el-radio-group v-model="form.cz" style="margin-bottom: 20px" class="button-box">-->
+<!--                                            <el-radio-button :label="true">铁脚艺</el-radio-button>-->
+<!--                                            <el-radio-button :label="false">实木脚</el-radio-button>-->
+<!--                                        </el-radio-group>-->
+<!--                                    </el-form-item>-->
+<!--                                </el-col>-->
+<!--                            </transition>-->
+                        </el-col>
+                        <!--电视柜-->
+                        <el-col :span="24" style="display: flex; flex-wrap: wrap;justify-content: space-around">
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="tvcabinet" class="transition-box">
+                                    <el-form-item label="面料材质" prop="ml">
+                                        <el-radio-group v-model="form.ml" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">网布</el-radio-button>
+                                            <el-radio-button :label="false">牛皮</el-radio-button>
+                                            <el-radio-button>绒布</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="tvcabinet" class="tie-box">
+                                    <el-form-item label="风格" prop="fg">
+                                        <el-radio-group v-model="form.fg" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">日式</el-radio-button>
+                                            <el-radio-button :label="false">北欧</el-radio-button>
+                                            <el-radio-button>新中式</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="tvcabinet" class="transition-box">
+                                    <el-form-item label="适用人数" prop="people">
+                                        <el-radio-group v-model="form.people" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">单人</el-radio-button>
+                                            <el-radio-button :label="false">双人</el-radio-button>
+                                            <el-radio-button>三人</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                        </el-col>
+                        <!--茶几-->
+                        <el-col :span="24" style="display: flex; flex-wrap: wrap;justify-content: space-around">
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="teapoy" class="transition-box">
+                                    <el-form-item label="面料材质" prop="ml">
+                                        <el-radio-group v-model="form.ml" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">网布</el-radio-button>
+                                            <el-radio-button :label="false">牛皮</el-radio-button>
+                                            <el-radio-button>绒布</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="teapoy" class="">
+                                    <el-form-item label="风格" prop="fg">
+                                        <el-radio-group v-model="form.fg" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">日式</el-radio-button>
+                                            <el-radio-button :label="false">北欧</el-radio-button>
+                                            <el-radio-button>新中式</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="teapoy" class="tie-box">
+                                    <el-form-item label="五星脚材质" prop="cz">
+                                        <el-radio-group v-model="form.cz" style="margin-bottom: 20px" class="button-box">
+                                            <el-radio-button :label="true">铁脚艺</el-radio-button>
+                                            <el-radio-button :label="false">实木脚</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                        </el-col>
                     </el-col>
 
                 </el-form>
@@ -593,6 +693,9 @@
         },
         data(){
             return {
+                sofa:false,
+                tvcabinet:false,
+                teapoy:false,
                 total:50,//默认数据总数
                 currentPage:1,//默认开始页面
                 pageSize:5,//每页的数据条数
@@ -613,6 +716,21 @@
             handleCurrentChange(val) {
                 // console.log(`当前页: ${val}`);
                 this.currentPage = val;
+            },
+            sofas(){
+                this.sofa = !this.sofa;
+                this.tvcabinet = false;
+                this.teapoy = false;
+            },
+            tvcabinets(){
+                this.sofa = false;
+                this.tvcabinet = !this.tvcabinet;
+                this.teapoy = false;
+            },
+            teapoys(){
+                this.sofa = false;
+                this.tvcabinet = false;
+                this.teapoy = !this.teapoy;
             },
         }
     }
@@ -938,5 +1056,8 @@
     .yz-box15{
         background: url("../../../assets/list/t15.png") no-repeat;
         background-position: center center;
+    }
+    .form-box{
+        height: auto!important;
     }
 </style>
