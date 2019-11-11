@@ -342,7 +342,7 @@
     .buy{
         width:180px;
         height:50px;
-        background:white;
+        background:rgba(255,255,255,0.5);
         color:#358c94;
         position:absolute;
         left:180px;
@@ -673,13 +673,17 @@ export default {
       },
       clickk(val){
         alert(val);
+          location.replace('/details')
 
+
+
+        // this.$axios.post('http://127.0.0.1:5000/api/first',val)
       },
       Time(){
           //倒计时
 
           setInterval(()=>{let now = new Date();
-        let future = new Date("2019-11-8 8:00:45");
+        let future = new Date("2029-11-8 8:00:45");
         let offset = Math.floor((future.getTime()-now.getTime())/1000);
         // 天
 
