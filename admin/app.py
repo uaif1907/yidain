@@ -1,6 +1,7 @@
 from flask import Flask
 from .extends import app_extend,db
 from .api import register_api
+from .database import usertable
 # 创建flask应用
 def create_app():
     app = Flask(__name__)
@@ -12,4 +13,3 @@ def create_app():
         db.create_all()
 
     return app
-
