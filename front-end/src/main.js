@@ -7,6 +7,11 @@ import 'element-ui/lib/theme-chalk/index.css';
 import echarts from 'echarts'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+<<<<<<< HEAD
+=======
+
+Vue.use(VueAxios, axios)
+>>>>>>> 063700f62491c4c6252cfbcc795476284ae9c57d
 
 Vue.use(VueAxios, axios)
 Vue.prototype.$axios = axios

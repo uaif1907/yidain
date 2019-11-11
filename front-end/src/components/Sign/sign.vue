@@ -15,19 +15,19 @@
       </div>
   <el-form-item >
     <div class="Boxone">
-      <el-input v-model="form.name" style="width: 280px;border-radius:0;font-size: medium" prefix-icon="el-icon-mobile-phone"></el-input>
+      <el-input v-model="form.tele1" style="width: 280px;border-radius:0;font-size: medium" prefix-icon="el-icon-mobile-phone"></el-input>
       <p style="background: white;padding: 0 10px">手机号/账号/邮箱</p>
     </div>
   </el-form-item>
    <el-form-item style="margin-bottom: 15px">
     <div class="Boxtwo">
-       <el-input v-model="form.name" style="width: 280px;border-radius:0;font-size: medium" prefix-icon="el-icon-lock"></el-input>
+       <el-input v-model="form.pass1" style="width: 280px;border-radius:0;font-size: medium" prefix-icon="el-icon-lock"></el-input>
       <p style="background: white;padding: 0 10px">密码</p>
     </div>
    </el-form-item>
   <el-form-item >
     <div class="Left" style="font-size: 12px">
-      <p>立即注册</p>
+       <router-link :to="{name:'register'}" tag="span"  ><p>立即注册</p></router-link>
       <p>忘记密码?</p>
     </div>
   </el-form-item>
@@ -64,7 +64,8 @@
     data(){
       return{
                 form: {
-          name: '',
+          tele1: '',
+          pass1:'',
           region: '',
           date1: '',
           date2: '',
