@@ -15,14 +15,14 @@
       </div>
   <el-form-item >
     <div class="Boxone">
-      <el-input v-model="form.name" style="width: 280px;border-radius:0;font-size: medium" prefix-icon="el-icon-mobile-phone"></el-input>
+      <el-input v-model="form.tele2" style="width: 280px;border-radius:0;font-size: medium" prefix-icon="el-icon-mobile-phone"></el-input>
       <p style="background: white;padding: 0 10px">手机号/账号/邮箱</p>
     </div>
   </el-form-item>
    <el-form-item style="margin-bottom: 15px;" >
-    <div class="five">
-        <div class="Boxtwo1">
-       <el-input v-model="form.name" style="width: 180px;border-radius:0;font-size: medium" prefix-icon="el-icon-lock"></el-input>
+    <div class="five1">
+        <div class="Boxtwo2">
+       <el-input v-model="form.Code" style="width: 180px;border-radius:0;font-size: medium" prefix-icon="el-icon-lock"></el-input>
       <p  style="background: white;padding: 0 10px">验证码</p>
     </div>
         <el-button class="Buttontwo">获取验证码</el-button>
@@ -30,13 +30,13 @@
    </el-form-item>
    <el-form-item style="margin-bottom: 15px;margin-top: 20px">
     <div class="Boxtwo">
-       <el-input v-model="form.name" style="width: 280px;border-radius:0;font-size: medium" prefix-icon="el-icon-lock"></el-input>
+       <el-input v-model="form.pass2" style="width: 280px;border-radius:0;font-size: medium" prefix-icon="el-icon-lock"></el-input>
       <p style="background: white;padding: 0 10px">密码</p>
     </div>
    </el-form-item>
   <el-form-item >
     <div class="Left" style="font-size: 12px">
-      <p>请登录</p>
+      <router-link :to="{name:'login'}" tag="span"  ><p>请登录</p></router-link>
     </div>
   </el-form-item>
   <el-form-item>
@@ -59,7 +59,9 @@
     data(){
       return{
                 form: {
-          name: '',
+          telte2: '',
+          Code: '',
+          pass2: '',
           region: '',
           date1: '',
           date2: '',
@@ -106,12 +108,12 @@
     left: 0;
     top: 0;
   }
-  .Boxtwo1{
+  .Boxtwo2{
     position: relative;
     left: 0;
     top: 0;
   }
-  .Boxtwo1 p{
+  .Boxtwo2 p{
     height:24px;
     color: #a0a0a0;
     font-size: 12px;
@@ -164,7 +166,7 @@
     display: flex;
     justify-content: space-between;
   }
-    .five{
+    .five1{
         width: 280px;
         margin: 0 auto;
         display: flex;
