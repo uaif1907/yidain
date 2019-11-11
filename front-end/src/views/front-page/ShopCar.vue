@@ -38,7 +38,7 @@
       
     
 
-    <el-button style="margin-top: 12px;background-color:#ccc;float:right;width:160px;height:60px;font-size:30px;color:white;" @click="next">结算</el-button>
+    <el-button v-if="active==0 ||active==1||active==2" style="margin-top: 12px;background-color:#ccc;float:right;width:160px;height:60px;font-size:30px;color:white;" @click="next">结算</el-button>
     <Recommend></Recommend>
   </div>
   

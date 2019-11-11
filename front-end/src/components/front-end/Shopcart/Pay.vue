@@ -17,7 +17,12 @@
                        <p>～ 订单提交成功啦，赶紧付款吧</p>
                    </div>
                    <div>
-                      <div style="float: left">～</div>  <div class="dsq">min</div> 后将自动取消订单
+                      <div style="float: left">～</div>
+                       <div class="dsq" >
+                            <div >   30<span>min</span></div>
+                           <div>   00 <span>s</span></div>
+                           <div>   00 <span>ms</span></div>
+                       </div> 后将自动取消订单
                    </div>
                    <div class="ord-text">
                        <span>～ 订单号是：</span>
@@ -83,6 +88,23 @@
         border: 1px solid #e5e5e5;
         float: left;
         margin-right: 25px;
+        text-align: center;
+        line-height: 38px;
+    }
+    .dsq > div{
+        float: left;
+        width: 83px;
+        border-right:2px solid #ffdede ;
+        font-size: 20px;
+        font-weight: 600;
+        color: red;
+    }
+    .dsq :nth-child(3){
+        border-right: none;
+    }
+    .dsq>div>span{
+        font-size: 10px;
+        color: black;
     }
     .ord-text{
         margin-top: 28px;
@@ -121,6 +143,23 @@ export default {
           radio1:'1',
 
       };
-    }
+    },
+    // created(){
+    //     this.Time()
+    // },
+    // Time(){
+    //     setInterval(()=>{let now = new Date()})
+    //     let future = new Date("2019-11-8 8:00:45")
+    //     let offset = Math.floor((future.getTime()-now.getTime())/1000) //天
+    //     let hourNum = Math.floor(offset/(60*60))
+    //     this.hour=hourNum
+    //     let minNum = Math.floor((offset)%(60*60)/60)
+    //     this.minute = minNum
+    //     let secNum = Math.floor(offset%(60*60)%60)
+    //     this.sec = secNum
+    //     this.time['hour'] = this.hour
+    //     this.time['minute'] = this.minute
+    //     this.time['sec'] = this.sec
+    // }
 }
 </script>
