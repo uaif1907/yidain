@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div class="blockone" style="margin-bottom: 0.3px">
-      <div class="pos">
-        <Sign></Sign>
+      <div class="pos2">
+        <Register></Register>
       </div>
     </div>
 
@@ -11,11 +11,11 @@
 
 <script>
 // @ is an alias to c
-import Sign from '@/components/Sign/sign.vue'
+import Register from '@/components/Register/register.vue'
 export default {
-  name: 'login',
+  name: 'register',
   components: {
-    Sign,
+    Register,
   },
   data(){
     return{
@@ -41,19 +41,18 @@ export default {
   .blockone{
     width: 1519.2px;
     height: 500px;
-    background: url("../../assets/login/1.png");
+    background: url("../../assets/login/2.png");
     position: relative;
     left: 0;
     top: 0;
   }
-  .pos{
+
+    .pos2{
     width: auto;
     height: auto;
     position: absolute;
     right: 100px;
     top: 60px;
-    z-index: 60;
+    z-index: 50;
   }
-
-
 </style>

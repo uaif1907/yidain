@@ -5,6 +5,10 @@ import ElementUI from 'element-ui';
 import VCharts from 'v-charts'
 import 'element-ui/lib/theme-chalk/index.css';
 import echarts from 'echarts'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios, axios)
 
 Vue.prototype.$echarts = echarts
 
