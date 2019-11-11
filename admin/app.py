@@ -6,7 +6,7 @@ from .api import register_api
 from .database import usertable
 from .database import categoriesTable
 from .database import categoriesPtable
-
+from .database import categoryValue
 from .database import usertable
 
 from .database import goodstable
