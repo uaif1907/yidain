@@ -6,7 +6,7 @@
             </el-carousel-item>
         </el-carousel>
         <!--查询-->
-        <el-row :span="24" style="height: 456px;">
+        <el-row :span="24" style="height: auto;">
             <el-row :span="24" style="height: 124px;padding: 30px 0">
                 <el-col :span="6" style="display: flex">
                     <span class="round"></span>
@@ -19,7 +19,7 @@
                         </div>
                         <el-breadcrumb separator="/" class="size-box">
                             <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ name:'bed'}">床</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ name:'kitchen'}">厨房</el-breadcrumb-item>
                         </el-breadcrumb>
                         <div class="tu-box">
                             <i class="el-icon-arrow-up"></i>
@@ -28,7 +28,7 @@
                     </el-col>
                 </el-col>
             </el-row>
-            <el-row :span="24" style="height: 332px">
+            <el-row :span="24" style="height: auto">
                 <el-form ref="form" :model="form" label-width="80px" class="form-box">
                     <el-col :span="10" class="input-box">
                         <el-form-item label="排序">
@@ -49,40 +49,95 @@
                             </el-col>
                         </el-form-item>
                     </el-col>
-                    <el-col :span="10">
-                        <el-form-item label="面料材质" prop="ml">
-                            <el-radio-group v-model="form.ml" style="margin-bottom: 20px;" class="button-box">
-                                <el-radio-button :label="true">网布</el-radio-button>
-                                <el-radio-button :label="false">牛皮</el-radio-button>
-                                <el-radio-button>绒布</el-radio-button>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="10" class="tie-box">
-                        <el-form-item label="风格" prop="fg">
-                            <el-radio-group v-model="form.fg" style="margin-bottom: 20px;" class="button-box">
-                                <el-radio-button :label="true">日式</el-radio-button>
-                                <el-radio-button :label="false">北欧</el-radio-button>
-                                <el-radio-button>新中式</el-radio-button>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="10">
-                        <el-form-item label="适用人数" prop="people">
-                            <el-radio-group v-model="form.people" style="margin-bottom: 20px;" class="button-box">
-                                <el-radio-button :label="true">单人</el-radio-button>
-                                <el-radio-button :label="false">双人</el-radio-button>
-                                <el-radio-button>三人</el-radio-button>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="10" class="tie-box">
-                        <el-form-item label="五星脚材质" prop="cz">
-                            <el-radio-group v-model="form.cz" style="margin-bottom: 20px" class="button-box">
-                                <el-radio-button :label="true">铁脚艺</el-radio-button>
-                                <el-radio-button :label="false">实木脚</el-radio-button>
-                            </el-radio-group>
-                        </el-form-item>
+                    <el-col :span="24">
+                        <div class="tu-box" style="margin-left: 50px!important;">
+                            <i class="el-icon-arrow-up"></i>
+                            <i class="el-icon-arrow-down"></i>
+                            <i class="el-icon-arrow-up"></i>
+                            <i class="el-icon-arrow-down"></i>
+                        </div>
+                        <el-col style="display: flex;justify-content: space-around;margin-left: 50px;" :span="4">
+                            <div>厨房：</div>
+                            <div @click="cupboards()" style="cursor: pointer">橱柜</div>|
+                            <div @click="mantles()" style="cursor: pointer">水槽</div>|
+                            <div @click="consoles()" style="cursor: pointer">操作台</div>
+                        </el-col>
+                        <div class="tu-box" style="margin-top: 24px;margin-left: 50px">
+                            <i class="el-icon-arrow-up"></i>
+                            <i class="el-icon-arrow-down"></i>
+                        </div>
+                        <!--橱柜-->
+                        <el-col :span="24" style="display: flex; margin-top: 10px;flex-wrap: wrap;justify-content: space-around">
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="cupboard" class="transition-box">
+                                    <el-form-item label="种类" prop="zl">
+                                        <el-radio-group v-model="zl" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">吊柜</el-radio-button>
+                                            <el-radio-button :label="false">顶柜</el-radio-button>
+                                            <el-radio-button>壁柜</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="cupboard" class="transition-box">
+                                    <el-form-item label="抽屉" prop="ct">
+                                        <el-radio-group v-model="ct" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">两抽</el-radio-button>
+                                            <el-radio-button :label="false">三抽</el-radio-button>
+                                            <el-radio-button>四抽</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                        </el-col>
+                        <!--水槽-->
+                        <el-col :span="24" style="display: flex; flex-wrap: wrap;justify-content: space-around">
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="mantle" class="transition-box">
+                                    <el-form-item label="材质" prop="caiz">
+                                        <el-radio-group v-model="caiz" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">不锈钢</el-radio-button>
+                                            <el-radio-button :label="false">陶瓷</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="mantle" class="">
+                                    <el-form-item label="种类" prop="dc">
+                                        <el-radio-group v-model="dc" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">单槽水槽</el-radio-button>
+                                            <el-radio-button :label="false">双槽水槽</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                        </el-col>
+                        <!--操作台-->
+                        <el-col :span="24" style="display: flex; flex-wrap: wrap;justify-content: space-around">
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="console" class="transition-box">
+                                    <el-form-item label="材质" prop="pp">
+                                        <el-radio-group v-model="cai" style="margin-bottom: 20px;" class="button-box">
+                                            <el-radio-button :label="true">亚克力</el-radio-button>
+                                            <el-radio-button :label="false">陶瓷</el-radio-button>
+                                            <el-radio-button>石英石</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                            <transition name="el-fade-in-linear">
+                                <el-col :span="10" v-show="console" class="tie-box">
+                                    <el-form-item label="品质" prop="pz">
+                                        <el-radio-group v-model="pz" style="margin-bottom: 20px" class="button-box">
+                                            <el-radio-button :label="true">易清洗</el-radio-button>
+                                            <el-radio-button :label="false">易维护</el-radio-button>
+                                        </el-radio-group>
+                                    </el-form-item>
+                                </el-col>
+                            </transition>
+                        </el-col>
                     </el-col>
 
                 </el-form>
@@ -109,430 +164,458 @@
             </el-col>
             <!--            第二个图-->
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">ZEST ONE</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">装饰椅</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">现代小椅，随处安放的舒适</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">599.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">ZEST ONE</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">装饰椅</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">现代小椅，随处安放的舒适</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">599.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
             <!--            第三个图-->
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box1"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">MORNING TWILIGHT</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">晨暮青</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">脱开引力，自由旋转</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">499.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box1"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">MORNING TWILIGHT</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">晨暮青</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">脱开引力，自由旋转</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">499.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
         </el-row>
         <!--第二-->
         <el-row :span="24" style="height: 410px;display: flex;justify-content: space-between;margin-top: 60px">
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box4"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">WINDSOR CHAIR</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">温莎椅</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">设计简单而不是尊贵</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">460.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box4"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">WINDSOR CHAIR</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">温莎椅</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">设计简单而不是尊贵</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">460.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box5"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">LUXURY DINING CHAIR</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">轻奢餐椅</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">不止黑白灰的高雅</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">539.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box5"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">LUXURY DINING CHAIR</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">轻奢餐椅</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">不止黑白灰的高雅</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">539.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
             <!--            第3个图-->
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box6"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">CASTLE PEAK CHAIR</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">青山椅</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">抽离繁琐的设计，体现美的线条</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">599.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box6"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">CASTLE PEAK CHAIR</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">青山椅</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">抽离繁琐的设计，体现美的线条</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">599.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
             <!--            第4个图-->
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box7"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">CONCH CHAIR</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">海螺椅</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">现代小椅，随处安放的舒适</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">588.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box7"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">CONCH CHAIR</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">海螺椅</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">现代小椅，随处安放的舒适</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">588.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
         </el-row>
         <!--第3-->
         <el-row :span="24" style="height: 410px;display: flex;justify-content: space-between;margin-top: 60px">
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box8"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">WINDSOR CHAIR</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">温莎椅</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">设计简单而不是尊贵</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">460.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box8"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">WINDSOR CHAIR</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">温莎椅</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">设计简单而不是尊贵</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">460.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box9"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">CHUN MU HOME</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">春沐椅</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">写意太师、蕴照东方</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">1290.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box9"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">CHUN MU HOME</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">春沐椅</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">写意太师、蕴照东方</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">1290.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
             <!--            第3个图-->
             <el-col :span="6" style="position: relative;" class="h-box">
-                <img src="../../../assets/list/t10.png" alt="">
-                <el-col :span="24" class="bj-box"></el-col>
-                <el-col :span="20" class="ye-box">
-                    <el-col class="ha-box">HAMMARN</el-col>
-                    <el-col class="ma-box">哈马恩</el-col>
-                    <el-col class="en-box">Hammarn</el-col>
-                </el-col>
-                <el-col :span="24" class="xia-box">
-                    <el-row :span="24" style="display: flex">
-                        <el-col style="display: flex;">
-                            <el-col class="er-box">268.00</el-col>
-                            <el-col class="q-box">RMB</el-col>
-                        </el-col>
-                        <el-col>
-                            <el-button style="padding: 9px 20px;float: right;border: 1px solid #999999">Buy</el-button>
-                        </el-col>
-                    </el-row>
-                </el-col>
-            </el-col>
-            <!--            第4个图-->
-            <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box11"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">LAZY CHAIR.</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">懒人椅子</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <img src="../../../assets/list/t10.png" alt="">
+                    <el-col :span="24" class="bj-box"></el-col>
+                    <el-col :span="20" class="ye-box">
+                        <el-col class="ha-box">HAMMARN</el-col>
+                        <el-col class="ma-box">哈马恩</el-col>
+                        <el-col class="en-box">Hammarn</el-col>
+                    </el-col>
+                    <el-col :span="24" class="xia-box">
+                        <el-row :span="24" style="display: flex">
+                            <el-col style="display: flex;">
+                                <el-col class="er-box">268.00</el-col>
+                                <el-col class="q-box">RMB</el-col>
                             </el-col>
-                            <el-col class="xd-box">拉丝不锈钢金属架，值得你选择</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">888.00</el-row>
+                            <el-col>
+                                <el-button style="padding: 9px 20px;float: right;border: 1px solid #999999">Buy</el-button>
                             </el-col>
                         </el-row>
                     </el-col>
-                </el-row>
+                </router-link>
+            </el-col>
+            <!--            第4个图-->
+            <el-col :span="6" style="position: relative;" class="ying-box">
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
+                    </el-col>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box11"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">LAZY CHAIR.</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">懒人椅子</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">拉丝不锈钢金属架，值得你选择</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">888.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
         </el-row>
         <!--第4-->
         <el-row :span="24" style="height: 410px;display: flex;justify-content: space-between;margin-top: 60px">
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box12"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">OBEDIENCE FUJIJO</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">藤条椅</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">设计简单而不是尊贵</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">460.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box12"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">OBEDIENCE FUJIJO</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">藤条椅</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">设计简单而不是尊贵</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">460.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box13"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">NET RED CHAIR</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">网红椅</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">无任何人造板和贴皮</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">540.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box13"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">NET RED CHAIR</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">网红椅</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">无任何人造板和贴皮</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">540.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
             <!--            第二个图-->
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box14"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">CASTLE PEAK CHAIR</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">青山椅</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">抽离繁琐的设计，体现美的线条</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">599.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box14"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">CASTLE PEAK CHAIR</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">青山椅</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">抽离繁琐的设计，体现美的线条</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">599.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
             <!--            第三个图-->
             <el-col :span="6" style="position: relative;" class="ying-box">
-                <el-col class="gwc-box">
-                    <i class="iconfont icon-gouwuche"></i>
-                </el-col>
-                <el-col class="gg-box"></el-col>
-                <el-col class="yc-box"></el-col>
-                <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
-                    <el-col :span="20" class="yz-box yz-box15"></el-col>
-                    <el-col :span="24" class="bun-box">
-                        <el-row :span="24" style="display: flex;flex-wrap: wrap">
-                            <el-col class="g-box"></el-col>
-                            <el-col class="zest-box">CONCH CHAIR</el-col>
-                            <el-col>
-                                <el-row>
-                                    <el-col style="display: flex;justify-content: center;line-height: 20px">
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                        <span style="margin: 0 4px;color: #272727;font-weight: 600">海螺椅</span>
-                                        <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
-                                    </el-col>
-                                </el-row>
-                            </el-col>
-                            <el-col class="xd-box">现代小椅，随处安放的舒适</el-col>
-                            <el-col style="display: flex;justify-content: center">
-                                <el-row class="r-box">RMB</el-row>
-                                <el-row class="w-box">588.00</el-row>
-                            </el-col>
-                        </el-row>
+                <router-link tag="div" :to="{name:'details'}">
+                    <el-col class="gwc-box">
+                        <i class="iconfont icon-gouwuche"></i>
                     </el-col>
-                </el-row>
+                    <el-col class="gg-box"></el-col>
+                    <el-col class="yc-box"></el-col>
+                    <el-row :span="24" style="display: flex;flex-wrap: wrap;cursor: pointer;">
+                        <el-col :span="20" class="yz-box yz-box15"></el-col>
+                        <el-col :span="24" class="bun-box">
+                            <el-row :span="24" style="display: flex;flex-wrap: wrap">
+                                <el-col class="g-box"></el-col>
+                                <el-col class="zest-box">CONCH CHAIR</el-col>
+                                <el-col>
+                                    <el-row>
+                                        <el-col style="display: flex;justify-content: center;line-height: 20px">
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                            <span style="margin: 0 4px;color: #272727;font-weight: 600">海螺椅</span>
+                                            <i class="el-icon-arrow-up" style="line-height: 20px;color: #7f7f7f"></i>
+                                        </el-col>
+                                    </el-row>
+                                </el-col>
+                                <el-col class="xd-box">现代小椅，随处安放的舒适</el-col>
+                                <el-col style="display: flex;justify-content: center">
+                                    <el-row class="r-box">RMB</el-row>
+                                    <el-row class="w-box">588.00</el-row>
+                                </el-col>
+                            </el-row>
+                        </el-col>
+                    </el-row>
+                </router-link>
             </el-col>
         </el-row>
         <!--        分页-->
@@ -547,7 +630,7 @@
                             :page-size="pageSize"
                             layout="prev, pager, next"
                             :total="total"
-                            >
+                    >
                     </el-pagination>
                 </div>
             </el-col>
@@ -565,14 +648,19 @@
         },
         data(){
             return {
+                cupboard:false,
+                mantle:false,
+                console:false,
                 total:50,//默认数据总数
                 currentPage:1,//默认开始页面
                 pageSize:5,//每页的数据条数
+                pz:true,
+                cai:true,
+                caiz:true,
+                dc:true,
+                zl:true,
+                ct:true,
                 form:{
-                    ml:true,
-                    fg:true,
-                    people:true,
-                    cz:true,
                     region:'',
                     pricel:'',
                     pricer:'',
@@ -585,6 +673,21 @@
             handleCurrentChange(val) {
                 // console.log(`当前页: ${val}`);
                 this.currentPage = val;
+            },
+            cupboards(){
+                this.cupboard = !this.cupboard;
+                this.mantle = false;
+                this.console = false;
+            },
+            mantles(){
+                this.cupboard = false;
+                this.mantle = !this.mantle;
+                this.console = false;
+            },
+            consoles(){
+                this.cupboard = false;
+                this.mantle = false;
+                this.console = !this.console;
             },
         }
     }
@@ -910,5 +1013,8 @@
     .yz-box15{
         background: url("../../../assets/list/t15.png") no-repeat;
         background-position: center center;
+    }
+    .form-box{
+        height: auto!important;
     }
 </style>
