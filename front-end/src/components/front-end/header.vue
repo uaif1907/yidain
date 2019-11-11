@@ -6,9 +6,9 @@
                     <el-col :span="10" class="login-box">
                         <p>请您</p>
                         <div class="round-box">
-                            <router-link :to="{name:'login'}" tag="span">登录</router-link>
+                            <router-link :to="{name:'login'}" tag="span"  >登录</router-link>
                             |
-                            <router-link :to="{name:'login'}" tag="span">注册</router-link>
+                            <router-link :to="{name:'register'}" tag="span" >注册</router-link>
                         </div>
                     </el-col>
                     <el-col :span="10" style="float: right;cursor: pointer">
@@ -42,11 +42,13 @@
     // @ is an alias to /src
     // import HelloWorld from '@/components/HelloWorld.vue'
 
+
     export default {
         name: 'headers',
         components: {
             // HelloWorld
-        }
+        },
+
     }
 </script>
 <style scoped>

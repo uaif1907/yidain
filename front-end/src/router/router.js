@@ -38,6 +38,12 @@ const routes = [
 
       },
       {
+        path: 'register',
+        name: 'register',// 登录页
+        component: () => import('../views/front-page/Register.vue'),
+
+      },
+      {
         path: 'chair',
         name: 'chair',// 座椅页
         component: () => import('../views/front-page/Chair.vue'),
