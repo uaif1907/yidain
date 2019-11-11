@@ -1,10 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Api
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 063700f62491c4c6252cfbcc795476284ae9c57d
 # 创建flask_sqlalchemy扩展
 db = SQLAlchemy()
 # 创建 restful apis
