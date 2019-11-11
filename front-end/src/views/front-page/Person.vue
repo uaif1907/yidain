@@ -36,16 +36,22 @@
             <!--盒子内容-->
             <div class="conbox_con">
               <div class="conbox_body">
-                <div class="con_logobox"><img src="../../assets/person_img/图层66.png" alt=""></div>
-                <span>我的资料 / My profile</span>
+                <router-link :to="{name:'person_info'}" tag="div">
+                  <div class="con_logobox"><img src="../../assets/person_img/图层66.png" alt=""></div>
+                  <span>我的资料 / My profile</span>
+                </router-link>
               </div>
               <div class="conbox_body">
-                <div class="con_logobox"><img src="../../assets/person_img/图层70.png" alt=""></div>
-                <span>收货地址管理 / Receiving address</span>
+                <router-link :to="{name:'person_add'}" tag="div">
+                  <div class="con_logobox"><img src="../../assets/person_img/图层70.png" alt=""></div>
+                  <span>收货地址管理 / Receiving address</span>
+                </router-link>
               </div>
               <div class="conbox_body">
-                <div class="con_logobox"><img src="../../assets/person_img/图层67.png" alt=""></div>
-                <span>账户安全 / Account security</span>
+                <router-link :to="{name:'person_sec'}" tag="div">
+                  <div class="con_logobox"><img src="../../assets/person_img/图层67.png" alt=""></div>
+                  <span>账户安全 / Account security</span>
+                </router-link>
               </div>
             </div>
           </div>
@@ -106,6 +112,7 @@
       </div>
 
       <!--右侧内容-->
+
       <div class="person_right_box">
 
         <!--信息栏-->

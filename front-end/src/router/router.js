@@ -49,23 +49,23 @@ const routes = [
         component: () => import('../views/front-page/Parlour.vue'),
 
       },
-      {
-        path: 'bed',
-        name: 'bed',// 床页
-        component: () => import('../views/front-page/Bed.vue'),
-
-      },
-      {
-        path: 'cabinet',
-        name: 'cabinet',// 柜子页
-        component: () => import('../views/front-page/Cabinet.vue'),
-
-      },
-      {
-        path: 'edge',
-        name: 'edge',// 边几页
-        component: () => import('../views/front-page/Edge.vue'),
-      },
+      // {
+      //   path: 'bed',
+      //   name: 'bed',// 床页
+      //   component: () => import('../views/front-page/Bed.vue'),
+      //
+      // },
+      // {
+      //   path: 'cabinet',
+      //   name: 'cabinet',// 柜子页
+      //   component: () => import('../views/front-page/Cabinet.vue'),
+      //
+      // },
+      // {
+      //   path: 'edge',
+      //   name: 'edge',// 边几页
+      //   component: () => import('../views/front-page/Edge.vue'),
+      // },
       {
         path: 'kitchen',
         name: 'kitchen',// 厨房
@@ -106,17 +106,32 @@ const routes = [
           {
             path:'one',
             name:'one',
-            component:() => import('../components/front-end/person/one.vue')
+            component:() => import('../components/front-end/person/one.vue')  //待发货
           },
           {
             path:'two',
             name:'two',
-            component:() => import('../components/front-end/person/two.vue')
+            component:() => import('../components/front-end/person/two.vue')  //运输中
           },
           {
             path:'three',
             name:'three',
-            component:() => import('../components/front-end/person/three.vue')
+            component:() => import('../components/front-end/person/three.vue')  //已完成
+          },
+          {
+            path:'person_info',
+            name:'person_info',
+            component:() => import('../components/front-end/person/person_info.vue') //个人信息
+          },
+          {
+            path:'person_add',
+            name:'person_add',
+            component:() => import('../components/front-end/person/person_add.vue')  //个人地址
+          },
+          {
+            path:'person_sec',
+            name:'person_sec',
+            component:() => import('../components/front-end/person/person_sec.vue')  //个人安全
           },
 
         ]
