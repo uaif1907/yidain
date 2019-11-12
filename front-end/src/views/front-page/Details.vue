@@ -4,7 +4,7 @@
     <el-breadcrumb separator="/" class="bread">
       <div class="yuandian1"></div>
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item><a href="/">座椅</a></el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/chair' }"><a>座椅</a></el-breadcrumb-item>
       <el-breadcrumb-item>北欧旅程</el-breadcrumb-item>
     </el-breadcrumb>
     <div class="showbox">
@@ -52,17 +52,28 @@
             <span style="margin-left:36px;">量</span>
           </div>
           <div>
-            <el-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字" size="small"></el-input-number>
+            <!-- <el-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="购买数量" size="small"></el-input-number> -->
+            <div>-</div>
+            <div style="width:40px;height:10px;border-radius:5px;">{{ amount }}</div>
+            <div>+</div>
           </div>
           <div style="width:100px;display:flex;height:33px;line-height:33px;margin-left:20px;">
             <span>库存{{num1}}件</span>
           </div>
         </div>
         <div style="display:flex;margin-top:40px;">
-          <el-button style="width:150px;background-color:#5ed5e0;color:white;boeder-radius:0px;">立即购买</el-button>
-          <el-button style="width:150px;margin-left:20px;">加入购物车</el-button>
+          <el-button style="width:150px;background-color:#5ed5e0;color:white;border-radius:0px;">立即购买</el-button>
+          <el-button style="width:150px;margin-left:20px;border-radius:0px;">加入购物车</el-button>
         </div>
       </div>
+    </div>
+    <div style="padding-top:100px;">
+      <img src="../../assets/details-img/detail.png" alt="" style="width:400px;height:80px;">
+    </div>
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
     <Recommend></Recommend>
   </div>
