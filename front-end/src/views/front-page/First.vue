@@ -677,7 +677,9 @@ export default {
 
 
 
-        // this.$axios.post('http://127.0.0.1:5000/api/first',val)
+        // this.$axios.post('http://192.168.1.100:5000/api/goods',val).then(res=>{
+        //     alert(res.data)
+        // })
       },
       Time(){
           //倒计时
