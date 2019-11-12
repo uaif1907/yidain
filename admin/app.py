@@ -8,6 +8,7 @@ from .database import categoriesTable
 from .database import categoriesPtable
 from .database import categoryVtable
 from .database import goodstable
+from .database import productskusTable
 
 # 创建flask应用
 def create_app():
