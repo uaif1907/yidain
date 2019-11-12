@@ -673,13 +673,13 @@ export default {
       },
       clickk(val){
         alert(val);
-          location.replace('/details')
+          // location.replace('/details')
 
 
 
-        // this.$axios.post('http://192.168.1.100:5000/api/goods',val).then(res=>{
-        //     alert(res.data)
-        // })
+        this.$axios.post('/api/goods',val).then(res=>{
+            alert(res.data)
+        })
       },
       Time(){
           //倒计时
