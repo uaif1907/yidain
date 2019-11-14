@@ -36,16 +36,22 @@
             <!--盒子内容-->
             <div class="conbox_con">
               <div class="conbox_body">
-                <div class="con_logobox"><img src="../../assets/person_img/图层66.png" alt=""></div>
-                <span>我的资料 / My profile</span>
+                <router-link :to="{name:'person_info'}" tag="div">
+                  <div class="con_logobox"><img src="../../assets/person_img/图层66.png" alt=""></div>
+                  <span>我的资料 / My profile</span>
+                </router-link>
               </div>
               <div class="conbox_body">
-                <div class="con_logobox"><img src="../../assets/person_img/图层70.png" alt=""></div>
-                <span>收货地址管理 / Receiving address</span>
+                <router-link :to="{name:'person_add'}" tag="div">
+                  <div class="con_logobox"><img src="../../assets/person_img/图层70.png" alt=""></div>
+                  <span>收货地址管理 / Receiving address</span>
+                </router-link>
               </div>
               <div class="conbox_body">
-                <div class="con_logobox"><img src="../../assets/person_img/图层67.png" alt=""></div>
-                <span>账户安全 / Account security</span>
+                <router-link :to="{name:'person_sec'}" tag="div">
+                  <div class="con_logobox"><img src="../../assets/person_img/图层67.png" alt=""></div>
+                  <span>账户安全 / Account security</span>
+                </router-link>
               </div>
             </div>
           </div>
@@ -106,6 +112,7 @@
       </div>
 
       <!--右侧内容-->
+
       <div class="person_right_box">
 
         <!--信息栏-->
@@ -143,175 +150,42 @@
 
         <!--按键栏-->
         <div class="person_right_status">
+
           <div class="status_box">
-            <div class="status_logo"><img src="../../assets/person_img/图层82.png" alt=""></div>
-            <div class="status_text">待发货</div>
-            <div class="status_text2">Waiting  for  shipment</div>
-            <div class="status_g"></div>
-            <div class="status_g2"></div>
+            <router-link :to="{name:'one'}" tag="div">
+              <div class="status_logo"><img src="../../assets/person_img/图层82.png" alt=""></div>
+              <div class="status_text">待发货</div>
+              <div class="status_text2">Waiting  for  shipment</div>
+              <div class="status_g"></div>
+              <div class="status_g2"></div>
+            </router-link>
           </div>
           <div class="status_box2">
-            <div class="status_logo"><img src="../../assets/person_img/图层83.png" alt=""></div>
-            <div class="status_text">运输中</div>
-            <div class="status_text2">Is  being  transported</div>
-            <div class="status_g"></div>
-            <div class="status_g2"></div>
+            <router-link :to="{name:'two'}" tag="div">
+              <div class="status_logo"><img src="../../assets/person_img/图层83.png" alt=""></div>
+              <div class="status_text">运输中</div>
+              <div class="status_text2">Is  being  transported</div>
+              <div class="status_g"></div>
+              <div class="status_g2"></div>
+            </router-link>
           </div>
           <div class="status_box3">
-            <div class="status_logo"><img src="../../assets/person_img/图层84.png" alt=""></div>
-            <div class="status_text">已完成</div>
-            <div class="status_text2">Is  being  transported</div>
-            <div class="status_g"></div>
-            <div class="status_g2"></div>
+            <router-link :to="{name:'three'}" tag="div">
+              <div class="status_logo"><img src="../../assets/person_img/图层84.png" alt=""></div>
+              <div class="status_text">已完成</div>
+              <div class="status_text2">Is  being  transported</div>
+              <div class="status_g"></div>
+              <div class="status_g2"></div>
+            </router-link>
           </div>
         </div>
 
         <!--内容栏-->
-        <div class="person_right_conboxs">
-
-          <!--表格头-->
-          <div class="right_conbox_title">
-            <input type="radio" style="float: left;margin-top: 20px">
-            <div class="title_con_box" style="height:56px;display: flex;justify-content: space-around;box-sizing: border-box">
-              <span>全选</span>
-              <span>商品描述</span>
-              <span>数量</span>
-              <span>单价</span>
-              <span>状态</span>
-              <span>状态</span>
-            </div>
-          </div>
-
-          <!--表格内容-->
-          <div class="right_conbox_con">
-            <div class="con-box">
-              <!--              <div class="demo-image box-img">-->
-              <!--                <div class="block" v-for="fit in fits" :key="fit">-->
-              <!--                  <el-image-->
-              <!--                          style="width: 120px; height: 120px"-->
-              <!--                          :src="url"-->
-              <!--                          :fit="fit">-->
-              <!--                  </el-image>-->
-              <!--                </div>-->
-              <!--              </div>-->
-              <div class="con_imgbox"><img src="../../assets/person_img/图层85.png" alt=""></div>
-              <div class="con_des">
-                <div class="des_title" style="font-weight: 600;">POÄNG- 波昂</div>
-                <span class="des_text" style="font-size: 12px;color: #b2b2b2;float: left;margin-left: 25px">摇椅  北欧风</span>
-              </div>
-              <div class="con_num">1</div>
-              <div class="con_money">699.00 <span>RMB</span></div>
-              <div class="con_status">
-                <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
-                <div style="font-weight: 600;position: absolute;top: 25px;left:0">待发货</div>
-              </div>
-              <div class="con_button">
-                <el-button type="info">查看物流</el-button>
-              </div>
-              <div class="con_order">
-                订单号：
-                <span>174683827949</span>
-              </div>
-            </div>
-            <div class="con-box">
-              <!--              <div class="demo-image box-img">-->
-              <!--                <div class="block" v-for="fit in fits" :key="fit">-->
-              <!--                  <el-image-->
-              <!--                          style="width: 120px; height: 120px"-->
-              <!--                          :src="url"-->
-              <!--                          :fit="fit">-->
-              <!--                  </el-image>-->
-              <!--                </div>-->
-              <!--              </div>-->
-              <div class="con_imgbox"><img src="../../assets/person_img/图层85.png" alt=""></div>
-              <div class="con_des">
-                <div class="des_title" style="font-weight: 600;">POÄNG- 波昂</div>
-                <span class="des_text" style="font-size: 12px;color: #b2b2b2;float: left;margin-left: 25px">摇椅  北欧风</span>
-              </div>
-              <div class="con_num">1</div>
-              <div class="con_money">699.00 <span>RMB</span></div>
-              <div class="con_status">
-                <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
-                <div style="font-weight: 600;position: absolute;top: 25px;left:0">待发货</div>
-              </div>
-              <div class="con_button">
-                <el-button type="info">查看物流</el-button>
-              </div>
-              <div class="con_order">
-                订单号：
-                <span>174683827949</span>
-              </div>
-            </div>
-            <div class="con-box">
-              <!--              <div class="demo-image box-img">-->
-              <!--                <div class="block" v-for="fit in fits" :key="fit">-->
-              <!--                  <el-image-->
-              <!--                          style="width: 120px; height: 120px"-->
-              <!--                          :src="url"-->
-              <!--                          :fit="fit">-->
-              <!--                  </el-image>-->
-              <!--                </div>-->
-              <!--              </div>-->
-              <div class="con_imgbox"><img src="../../assets/person_img/图层85.png" alt=""></div>
-              <div class="con_des">
-                <div class="des_title" style="font-weight: 600;">POÄNG- 波昂</div>
-                <span class="des_text" style="font-size: 12px;color: #b2b2b2;float: left;margin-left: 25px">摇椅  北欧风</span>
-              </div>
-              <div class="con_num">1</div>
-              <div class="con_money">699.00 <span>RMB</span></div>
-              <div class="con_status">
-                <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
-                <div style="font-weight: 600;position: absolute;top: 25px;left:0">待发货</div>
-              </div>
-              <div class="con_button">
-                <el-button type="info">查看物流</el-button>
-              </div>
-              <div class="con_order">
-                订单号：
-                <span>174683827949</span>
-              </div>
-            </div>
-            <div class="con-box">
-              <!--              <div class="demo-image box-img">-->
-              <!--                <div class="block" v-for="fit in fits" :key="fit">-->
-              <!--                  <el-image-->
-              <!--                          style="width: 120px; height: 120px"-->
-              <!--                          :src="url"-->
-              <!--                          :fit="fit">-->
-              <!--                  </el-image>-->
-              <!--                </div>-->
-              <!--              </div>-->
-              <div class="con_imgbox"><img src="../../assets/person_img/图层85.png" alt=""></div>
-              <div class="con_des">
-                <div class="des_title" style="font-weight: 600;">POÄNG- 波昂</div>
-                <span class="des_text" style="font-size: 12px;color: #b2b2b2;float: left;margin-left: 25px">摇椅  北欧风</span>
-              </div>
-              <div class="con_num">1</div>
-              <div class="con_money">699.00 <span>RMB</span></div>
-              <div class="con_status">
-                <img src="../../assets/person_img/图层82.png" alt="" style="float: left">
-                <div style="font-weight: 600;position: absolute;top: 25px;left:0">待发货</div>
-              </div>
-              <div class="con_button">
-                <el-button type="info">查看物流</el-button>
-              </div>
-              <div class="con_order">
-                订单号：
-                <span>174683827949</span>
-              </div>
-            </div>
-            <div class="pagbox" style="margin: 10px 0">
-              <el-pagination
-                      background
-                      layout="prev, pager, next"
-                      :total="100">
-              </el-pagination>
-            </div>
-          </div>
-
+        <div class="router_box">
+          <router-view></router-view>
         </div>
-      </div>
 
+      </div>
     </div>
     <recommend style="margin-top: 1200px"></recommend>
   </div>
@@ -326,13 +200,6 @@
     components: {
       recommend,
     },
-    // data(){
-    //   return {
-    //     fits: ['cover'],
-    //     url:'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
-    //     // url: '../../assets/person_img/图层85.png'
-    //   }
-    // }
   }
 </script>
 <style scoped>
@@ -577,7 +444,7 @@
     width: 180px;
     height: 100%;
     background-color: #ffffff;
-    border: 2px solid #b2b2b2;
+    border: 2px solid #e5e5e5;
     box-sizing: border-box;
     float: left;
     position: relative;
@@ -652,89 +519,8 @@
     width: 22px;
     height: 22px;
   }
-  .person_right_conboxs{
+  .router_box{
     width: 100%;
-  }
-  .right_conbox_title{
-    width: 100%;
-    height: 60px;
-    /*background-color: lightskyblue;*/
-    border: 2px solid #e5e5e5;
-    box-sizing: border-box;
-    line-height: 56px;
-    padding: 0px 10px;
-    font-weight: 600;
-  }
-  .right_conbox_con{
-    width: 100%;
-  }
-  .con-box{
-    width: 100%;
-    height: 180px;
-    /*background-color: lightcoral;*/
-    position: relative;
-    border-bottom: 2px solid #b2b2b2;
-  }
-  .con_imgbox{
-    width: 130px;
-    height: 130px;
-    /*background-color: lightskyblue;*/
-    float: left;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
-  .con_des{
-    width: 150px;
-    height: 60px;
-    /*background-color: lightseagreen;*/
-    position: absolute;
-    top: 30px;
-    left: 180px;
-  }
-  .con_num{
-    font-weight: 600;
-    position: absolute;
-    top: 34px;
-    left: 400px;
-  }
-  .con_money{
-    font-weight: 600;
-    position: absolute;
-    top: 34px;
-    left: 500px;
-  }
-  .con_money span{
-    font-size: 12px;
-    color: #b2b2b2;
-  }
-  .con_status{
-    width: 80px;
-    height: 60px;
-    /*background-color: #2c3e50;*/
-    position: absolute;
-    top: 30px;
-    right: 165px;
-  }
-  .con_button{
-    width: 56px;
-    height: 14px;
-    position: absolute;
-    right: 65px;
-    top:30px
-  }
-  .con_order{
-    width: 200px;
-    height: 28px;
-    /*background-color: #37c87d;*/
-    font-size: 14px;
-    float: left;
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-  }
-  .con_order span{
-    font-size: 16px;
-    font-weight: 600;
+    height: 100%;
   }
 </style>

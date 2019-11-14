@@ -8,11 +8,15 @@ from .database import shopcartable
 
 # 导入表，解决无法创建表的问题
 from .database import usertable
+<<<<<<< HEAD
+from .database import addtable
+=======
 from .database import categoriesTable
 from .database import categoriesPtable
 from .database import categoryVtable
 from .database import goodstable
 from .database import productskusTable
+>>>>>>> 26921f09a8f2753bcb2772d94c421b9667793a84
 
 
 # 创建flask应用
