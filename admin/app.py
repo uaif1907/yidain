@@ -1,14 +1,17 @@
 from flask import Flask
 from .extends import app_extend,db
 from .api import register_api
+
 # 导入表，解决无法创建表的问题
 from .database import usertable
+from .database import shopcartable
 from .database import categoriesTable
 from .database import categoriesPtable
 from .database import categoryVtable
 from .database import goodstable
 from .database import orderstable
 from .database import ordersGoods
+
 
 
 # 创建flask应用
