@@ -671,14 +671,16 @@ export default {
               this.present=4;
           }
       },
-      clickk(val){
-        alert(val);
-          // location.replace('/details')
+      clickk(){
+        // alert(val);
 
 
 
-        this.$axios.post('/api/goods',val).then(res=>{
-            alert(res.data)
+
+        this.$axios.post('/api/goods').then(res=>{
+           window.location.href="/details"+'/'+res.data.data;
+            // location.replace('/details')
+             alert(res.data.data)
         })
       },
       Time(){
