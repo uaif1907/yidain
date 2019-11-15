@@ -13,9 +13,10 @@ class OrdersAPI(Resource):
             item = item.__dict__
             item.pop('_sa_instance_state')
             money = (Shopcar.query.filter(Shopcar.id == item['sid']).first()).total
-            name = (User.query.filter(User.uid == item['uid']).first()).name
-            phone = (User.query.filter(User.uid == item['uid']).first()).phone
-            item.update({'money': money, 'name': name, 'phone': phone})
+            name = (User.query.filter(User.id == item['uid']).first()).name
+            phone = (User.query.filter(User.id == item['uid']).first()).phone
+            address = (User.query.filter(User.id == item['uid']).first()).address
+            item.update({'money': money, 'name': name, 'phone': phone,'address':address})
             con.append(item)
         return {'data':str(con)}
     # def post(self):

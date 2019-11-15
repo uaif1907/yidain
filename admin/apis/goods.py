@@ -42,16 +42,17 @@ class GoodsAPI(Resource):
         # 事物
         Goods.query.session.commit()
 
-        #删除
-        # deletes = Goods.query.filter(Goods.id == '2').first()
-        # Goods.query.session.delete(deletes)
-        # Goods.query.session.commit()
+        # 删除
+        deletes = Goods.query.filter(Goods.id == '2').first()
+        Goods.query.session.delete(deletes)
+        Goods.query.session.commit()
 
-        #修改
-        # data1 = Goods.query.filter(Goods.cid == '1').first()
-        # data1.name = '啦啦啦'
-        # Goods.query.session.commit()
+        # 修改
+        data1 = Goods.query.filter(Goods.cid == '1').first()
+        data1.name = '啦啦啦'
+        Goods.query.session.commit()
 
 
         return {'data':200}
+
 

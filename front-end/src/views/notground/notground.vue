@@ -228,7 +228,7 @@
                 url: 'https://img.alicdn.com/bao/uploaded/i3/2262300335/O1CN019fEmXK1ELTDgkTz8b_!!0-item_pic.jpg',
                 srcList: [
                     'https://img.alicdn.com/bao/uploaded/i3/2262300335/O1CN019fEmXK1ELTDgkTz8b_!!0-item_pic.jpg',
-                    'https://img.alicdn.com/bao/uploaded/i3/2262300335/O1CN019fEmXK1ELTDgkTz8b_!!0-item_pic.jpg'
+                    'https://img.alicdn.com/bao/uploaded/i3/2262300335/O1CN019fEmXK1ELTDgkTz8b_!!0-item_pic.jpg',
                 ],
 
             }

@@ -671,15 +671,17 @@ export default {
               this.present=4;
           }
       },
-      clickk(val){
-        alert(val);
-          location.replace('/details')
+      clickk(){
+        // alert(val);
 
 
 
-        // this.$axios.post('http://192.168.1.100:5000/api/goods',val).then(res=>{
-        //     alert(res.data)
-        // })
+
+        this.$axios.post('/api/goods').then(res=>{
+           window.location.href="/details"+'/'+res.data.data;
+            // location.replace('/details')
+             alert(res.data.data)
+        })
       },
       Time(){
           //倒计时
